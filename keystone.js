@@ -1,6 +1,4 @@
-// Simulate config options from your production environment by
-// customising the .env file in your project's root folder.
-require('dotenv').load();
+require('dotenv').config({path:'./env.txt'});//load env
 
 // Require keystone
 var keystone = require('keystone');
@@ -25,7 +23,7 @@ keystone.set('custom email',{
     apiKey: 'key-2b1d1709d3206060e9465097f142c2aa',
     domain: 'frida.hogs.xyz'
   },
-  base_url: (keystone.get('env') == 'production') ? 'http://fridacommunity.org' : 'http://frida.hogs.xyz'
+  base_url: (process.env.NODE_ENV == 'production') ? 'http://fridacommunity.org' : 'http://localhost:3000'
 });
 
 keystone.init({
@@ -46,11 +44,11 @@ keystone.init({
   
   'auto update': true,
   'session': true,
-  'session store': 'connect-redis',
-  'session store options':{
+  'session store': process.env.NODE_ENV == 'production' ? 'connect-redis' : 'connect-mongo',
+  'session store options':process.env.NODE_ENV == 'production' ? {
     'host': process.env.REDIS_HOST || '127.0.0.1',
     'port': '6379',
-  },
+  } : {},
   'auth': true,
   'user model': 'User',
 

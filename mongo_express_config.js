@@ -9,14 +9,9 @@ if (typeof process.env.MONGODB_PORT === 'string') {
   process.env.ME_CONFIG_MONGODB_PORT    = mongoConnection.port;
 }
 
-// Accesing Bluemix variable to get MongoDB info
-if (process.env.VCAP_SERVICES) {
-  var dbLabel = 'mongodb-2.4';
-  var env = JSON.parse(process.env.VCAP_SERVICES);
-  if (env[dbLabel]) {
-    mongo = env[dbLabel][0].credentials;
-  }
-} else {
+
+if(process.env.NODE_ENV == 'production'){
+
   mongo = {
     db:       'frida-kahlo',
     host:     'mongo',
@@ -26,6 +21,19 @@ if (process.env.VCAP_SERVICES) {
     url:      'mongodb://mongo:27017/frida-kahlo',
     username: '',
   };
+  
+}else{
+	
+  mongo = {
+    db:       'frida-kahlo',
+    host:     'localhost',
+    password: '',
+    port:     27017,
+    ssl:      false,
+    url:      'mongodb://localhost:27017/frida-kahlo',
+    username: '',
+  };
+  
 }
 
 module.exports = {

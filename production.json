@@ -1,6 +1,6 @@
 {
   apps : [{
-    name        : "app",
+    name        : "keystone",
     script      : "./keystone.js",
     watch       : false,
     env: {
