@@ -27,17 +27,16 @@ exports = module.exports = function(req, res) {
 	view.on('init',function(next){
 		keystone.list('Post').model.find()
 		.sort('-publishedDate')
-		.limit(1)
-		.populate('author categories')
+		.limit(2)
 		.exec(function(err,result){
 			if(result.length > 0){
-				locals.post = result[0];
+				locals.posts = result;
 			}
 			next(err);
 		});
 	});
 	
 	// Render the view
-	view.render('index-new');
+	view.render('index');
 	
 };

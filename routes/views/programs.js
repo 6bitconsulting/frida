@@ -20,11 +20,20 @@ exports = module.exports = {
 			case 'health':
 				id = '5735eed7ba9990eb0d1790cc';
 			break;
+			case 'all':
+				id = false;
+			break;
+			default:
+				return res.redirect('/programs/all');
 		}
 		
 		view.on('init', function(next) {
 			
-			keystone.list('Program').model.find().where('categories').in([id]).exec(function(err,results){
+			var q = keystone.list('Program').model.find();
+			
+			if(id !== false) q.where('categories').in([id]);
+			
+			q.exec(function(err,results){
 				locals.programs = results;
 				next(err);
 			});

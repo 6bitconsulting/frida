@@ -1,0 +1,8 @@
+- On all buttons make sure text is not in italics. --check
+- comment out calendar section on homepage --check
+- make footer links relevant to site, same links in footer as we do in main header --check
+- add approach link to immigration section in header. --check
+- bump font size to 17px, 27px line height for p
+- in all areas in site where we have posts let's only have title and date. I don't think we need all excess data like author etc (except on post detail) --check
+- you'll see we adapted on Frida - approach page we adapted that full width layout Let's apply that to all page templates except blog list page --check
+- On homepage comment out newsletter area and replace with a second blog post --check

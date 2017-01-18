@@ -59,10 +59,6 @@
 																				<time itemprop="datePublished" datetime="{{post.publishedDate}}">{{post._.publishedDate.format("MMMM Do, YYYY")}}</time>
 																			</a>
 																		</span>
-																		<span class="separator">&nbsp;|&nbsp;</span>
-																		<span itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author" class="author"> By <a href="#" title="Posts by admin" rel="author">{{ post.author.name.first  ~' '~  post.author.name.last }}</a></span>
-																		<span class="separator">&nbsp;|&nbsp;</span>
-																		<span class="cat-links"> In {% for cat in post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.last == false %}, {% endif %}{% endfor %}</span>
 																</div>
 																<h2 class="entry-title" itemprop="headline">
 																		<a href="/blog/post/{{post.slug}}">{{ post.title }}</a>
@@ -105,10 +101,6 @@
 																				<time itemprop="datePublished" datetime="{{post.publishedDate}}">{{post._.publishedDate.format('MMMM Do, YYYY')}}</time>
 																			</a>
 																		</span>
-																		<span class="separator">&nbsp;|&nbsp;</span>
-																		<span itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author" class="author"> By <a href="#" title="" rel="author">{{ post.author.name.first ~' '~ post.author.name.last }}</a></span>
-																		<span class="separator">&nbsp;|&nbsp;</span>
-																		<span class="cat-links"> In {% for cat in post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.last == false %}, {% endif %}{% endfor %}</span>
 																</div>
 																<h2 class="entry-title" itemprop="headline">
 																	<a href="/blog/post/{{post.slug}}">{{post.title}}</a>
