@@ -1,0 +1,24 @@
+footer - who we are -> frida kahlo - links match frida section --check		
+move purple bar on homepage between blog posts and programs --check
+copyright in footer -> 2017 --check
+body font - 17px - 36px --check
+unescape html tags in content --check	
+all pages full width - elements full width --check
+headline fonts - 300 first word, 900 second word --check
+read more buttons, new button style - purple, black on hover, no italics --check
+get rid of all italics on buttons. use same button class on all buttons --check
+small header - 27px font size - 36px line height --check
+team section - stack grid 2x2 - make sure descriptions appear below --check
+program details -> full width --check
+immigration drop down all caps	--check
+disable clicking parent link in header --check
+blog list view (remove word `published`) --check
+ensure no images squished on moments --check
+contact us, change label color to white. --check
+ensure no italics on contact us page --check
+remove all italics from site --check
+best practice on mobile header --check
+style mobile menu
+program page - squished images - crop instead of stretch (cant seem to get it to work?)
+program page - set limit on program excerpt to 6 lines. button absolute.
+shrink fonts on mobile.

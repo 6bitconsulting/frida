@@ -1008,7 +1008,11 @@ input.fw-input-search:active {
         text-align: center;
         float: inherit;
         margin: 0 0 1em;
+		width: 60px;
+		float: right;
+		margin-top: 22px;
     }
+	
     .header-1.fw-top-logo-left.search-in-menu .fw-search,
     .header-1.fw-top-logo-right.search-in-menu .fw-search {
         display: inline-block;
@@ -1031,21 +1035,42 @@ input.fw-input-search:active {
     .header-1.fw-top-logo-left.search-in-menu .fw-search.fw-mini-search .fw-search-icon,
     .header-1.fw-top-logo-right.search-in-menu .fw-search.fw-mini-search .fw-search-icon {
         margin: 0 auto;
+		
     }
     .header-1.fw-top-logo-left .fw-wrap-logo,
     .header-1.fw-top-logo-right .fw-wrap-logo {
         float: inherit;
         display: inline-block;
-        width: 100%;
+        width: calc(100% - 60px);
     }
     .header-1.fw-top-logo-left .fw-wrap-logo .fw-site-logo,
     .header-1.fw-top-logo-right .fw-wrap-logo .fw-site-logo {
         margin: 0 auto;
     }
     .header-1 .fw-sticky-menu .fw-wrap-logo {
-        display: block;
-        margin: 0 auto;
+        float: inherit;
+        display: inline-block;
+        width: calc(100% - 60px);
     }
+	
+	.fw-sticky-menu .fw-header-main .fw-container{
+		padding-top: 15px !important;
+		padding-bottom: 15px !important;
+	}
+	
+	.fw-sticky-menu .mmenu-link{
+		margin-top: 11px !important;
+		margin-bottom: 5px !important;
+	}
+	
+	.fw-sticky-menu .fw-site-logo{
+		text-align: left;
+	}
+	
+	.fw-sticky-menu .fw-site-logo img{
+		width: 140px;
+	}
+	
     /* Reponsive Header 2 */
     
     .header-2 .fw-container .mmenu-link,

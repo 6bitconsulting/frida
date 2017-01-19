@@ -123,11 +123,11 @@
 }
 .tf-sh-fa598166380669fb01e4ab7c1b6ba20e .wrap-forms .form-builder-item > div > label {
 	font-family: Lato;
-	font-style: italic;
 	font-weight: 700;
 	line-height: 30px;
 	font-size: 15px;
 	letter-spacing: -0.5px;
+	color: #fff;
 }
 .tf-sh-fa598166380669fb01e4ab7c1b6ba20e::-webkit-input-placeholder {
 	font-family: Lato;

@@ -2,6 +2,7 @@
 
 {% block css %}
 <link rel='stylesheet' href="/css/program.css" type="text/css" />
+<link rel='stylesheet' href="/css/gallery.css" type="text/css" />
 {% endblock %}
 
 {% block content %}
@@ -26,8 +27,8 @@
 
 
 												</div>
-												<div class="fw-text-box tf-sh-b64347b6b97d76f2928def54d7aab4be ">
-														<div class="fw-text-inner">
+												<div class="fw-text-box">
+														<div class="fw-subheader">
 																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar eleentum vestibulum.</p>
 														</div>
 												</div>
@@ -52,62 +53,51 @@
 										</div>
 								</div>
 						</div>
-
-						{% for row in programs|batch(2) %}
-						<div class="fw-row">
-								{% for program in row %}
-								<div id="column-b68b54db8e2e9d097952a9a8889e22de" class="fw-col-sm-8 fw-col-md-3 tf-sh-b68b54db8e2e9d097952a9a8889e22de  fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
-										<div class="fw-main-row-overlay"></div>
-										<div class="fw-col-inner">
-												<div class="fw-heading fw-heading-center  tf-sh-7834a6648e1080ce59e76d47b0089b3b">
-														<h4 class="fw-special-title">{{program.title}}</h4>
-
-
-												</div>
-												<div class="fw-divider tf-sh-3b74bc71ebf8f23c2fe8a9b080825011  fw-divider-align-center fw-line-solid fw-divider-line   fw_theme_border_only_color_2" style="width:96px; padding-top:0px; margin-bottom:15px; "></div>
-												<div class="fw-text-box tf-sh-0834636544770d1f4cfa471d363bb8ac ">
-														<div class="fw-text-inner">
-																<p style="text-align: center;">{{program.content.brief}}</p>
-														</div>
-												</div>
-												<div class="fw-divider-space  fw-custom-space  clearfix" style="height:27px;"></div>
-												<div class="text-center">
-														<a href="/programs/view/{{program.slug}}" target="_self" class="fw-btn tf-sh-e063bb1d6c761ba79b55f6fe533439f4  fw-btn-sm   fw-btn-2" style="">
-																<span>More details</span>
-														</a>
-												</div>
+						
+						
+					{% for row in programs|batch(2) %}
+					<div class="fw-row">
+					{% for program in row %}
+						<div class="program fw-col-sm-8 fw-col-md-3 tf-sh-b68b54db8e2e9d097952a9a8889e22de  fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
+							<div class="fw-main-row-overlay"></div>
+							<div class="fw-col-inner">
+								<div class="fw-heading fw-heading-center  tf-sh-7834a6648e1080ce59e76d47b0089b3b">
+									<h4 class="fw-special-title">{{program.title}}</h4>
+								</div>
+								<div class="fw-divider tf-sh-3b74bc71ebf8f23c2fe8a9b080825011  fw-divider-align-center fw-line-solid fw-divider-line   fw_theme_border_only_color_2" style="width:96px; padding-top:0px; margin-bottom:15px; "></div>
+								<div class="fw-text-box tf-sh-0834636544770d1f4cfa471d363bb8ac">
+										<div class="fw-text-inner program-brief">
+											<p style="text-align: center;">{{(program.content.brief|length > 150 ? program.content.brief|slice(0, 150) ~ '&hellip;' : my.text)|raw}}</p>
 										</div>
 								</div>
-								<div id="column-0d9d29e10bfad00421294c0dcefce86c" class="fw-col-sm-4 fw-col-md-3 fw-mobile-hide-element tf-sh-0d9d29e10bfad00421294c0dcefce86c  fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
-										<div class="fw-main-row-overlay"></div>
-										<div class="fw-col-inner">
-												<div class="fw-block-image-parent  fw-block-image-left" style="width: 260px; ">
-														<span class="fw-block-image-child fw-ratio-3-4 fw-ratio-container">
-														<noscript>
-														<img itemprop="image" src="{{program.featuredImage.secure_url}}"  alt="healing-through-art" data-maxdpr="1.7" width="260" class="lazyload" />
-														</noscript>
-														<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sizes="auto" data-srcset="{{program.featuredImage.secure_url}} 1920w"   alt="healing-through-art" data-maxdpr="1.7" width="260" class="lazyload" />			</span>
-												</div>
-										</div>
+								<div class="fw-divider-space  fw-custom-space  clearfix" style="height:27px;"></div>
+								<div class="text-center">
+									<a href="/programs/view/{{program.slug}}" target="_self" class="fw-btn tf-sh-e063bb1d6c761ba79b55f6fe533439f4  fw-btn-sm   fw-btn-2" style="">
+										<span>More details</span>
+									</a>
 								</div>
-								{% endfor %}
+							</div>
 						</div>
-
-						<div class="fw-row">
-								<div id="column-d93e2519f5a443c63257e300a57935a1" class="fw-col-sm-12 tf-sh-d93e2519f5a443c63257e300a57935a1">
-										<div class="fw-main-row-overlay"></div>
-										<div class="fw-col-inner">
-												<div class="fw-divider-space  fw-custom-space  clearfix" style="height:60px;"></div>
-										</div>
-								</div>
+						<div class="fw-col-sm-4 fw-col-md-3 fw-mobile-hide-element tf-sh-0d9d29e10bfad00421294c0dcefce86c  fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
+							<div class="fw-main-row-overlay"></div>
+							<div class="fw-col-inner">
+									<div class="fw-block-image-parent  fw-block-image-left" style="width: 260px; ">
+											<span class="fw-block-image-child fw-ratio-3-4 fw-ratio-container">
+											<noscript>
+											<img itemprop="image" src="{{program.featuredImage.secure_url}}"  alt="healing-through-art" data-maxdpr="1.7" width="260" class="lazyload" />
+											</noscript>
+											<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sizes="auto" data-srcset="{{program.featuredImage.secure_url}} 1920w"   alt="healing-through-art" data-maxdpr="1.7" width="260" class="lazyload" />			</span>
+									</div>
+							</div>
 						</div>
-						{% endfor %}
-
+					{% endfor %}
+					</div>
+					{% endfor %}
 				</div>
 		</section>
 </div>
 {% endblock %}
 
 {% block js %}
-
+<script type='text/javascript' src='/js/gallery.js'></script>
 {% endblock %}

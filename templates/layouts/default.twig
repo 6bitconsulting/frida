@@ -16,6 +16,7 @@
 		<link rel='stylesheet' id='the-core-style-css'  href='/css/the-core-style.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='prettyPhoto-css'  href='/css/prettyPhoto.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='animate-css'  href='/css/animate.css' type='text/css' media='all' />
+		<link rel='stylesheet' href='/css/style.css' />
 
 		{# Include template-specific stylesheets by extending the css block #}
 		{% block css %}{% endblock %}
@@ -42,7 +43,7 @@
 							<nav id="fw-menu-primary" class="fw-site-navigation primary-navigation">
 								<ul id="menu-main-menu" class="fw-nav-menu">
 									<li id="menu-item-452" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-8 menu-item-has-children menu-item-452 {% if active == 'about' %}current-menu-item{%endif%}">
-										<a href="/about/our-mission" >FRIDA</a>
+										<a href="#">FRIDA</a>
 										<ul class="sub-menu">
 											<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page page-item-8 menu-item-58"><a href="/about/our-mission" >APPROACH</a></li>
 											<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="/about/our-team" >OUR TEAM</a></li>
@@ -50,7 +51,7 @@
 										</ul>
 									</li>
 									<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-61 {% if active == 'programs' %}current-menu-item{%endif%}">
-                    <a href="/programs/all" >EDUCATION</a>
+										<a href="#">EDUCATION</a>
 										<ul class="sub-menu">
 											<li id="menu-item-879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-879"><a href="/programs/rise" >RISE</a></li>
 											<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="/programs/health" >HEALTH</a></li>
@@ -58,12 +59,12 @@
 										</ul>
 									</li>
 									<li id="menu-item-878" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-878 {% if active == 'immigration' %}current-menu-item{%endif%}">
-                    <a href="#">IMMIGRATION</a>
-                    <ul class="sub-menu">
-					  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/immigration">Approach</a></li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/immigration/faq">IMMIGRATION Q & A</a></li>
-                    </ul>
-                  </li>
+										<a href="#">IMMIGRATION</a>
+										<ul class="sub-menu">
+										  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/immigration">APPROACH</a></li>
+										  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/immigration/faq">IMMIGRATION Q & A</a></li>
+										</ul>
+									  </li>
 									<li id="menu-item-554" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-554 {% if active == 'blog' %}current-menu-item{%endif%}"><a href="/blog" >BLOG</a></li>
 									<li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65 {% if active == 'gallery' %}current-menu-item{%endif%}"><a href="/moments" >MOMENTS</a></li>
 									<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72 {% if active == 'contact' %}current-menu-item{%endif%}"><a href="/contact" >CONTACT</a></li>
@@ -102,20 +103,20 @@
 							<div class="fw-row">
 								<div class="fw-col-md-3 fw-col-sm-6">
 									<aside id="nav_menu-2" class="widget widget_nav_menu">
-										<h2 class="widget-title"><span>WHO WE ARE</span></h2>
+										<h2 class="widget-title"><span>FRIDA KAHLO</span></h2>
 										<div class="menu-who-we-are-container">
 											<ul id="menu-who-we-are" class="menu">
+												<li id="menu-item-226" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-8 current_page_item menu-item-226">
+													<a href="/about/our-mission" >APPROACH</a>
+												</li>
 												<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-221">
 													<a href="/about/our-team" >OUR TEAM</a>
 												</li>
-												<li id="menu-item-226" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-8 current_page_item menu-item-226">
-													<a href="/about/our-mission" >OUR MISSION</a>
+												<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222">
+													<a href="/about/faq" >FAQ</a>
 												</li>
 												<li id="menu-item-223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-223">
 													<a href="/contact" >CONTACT</a>
-												</li>
-												<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222">
-													<a href="/about/faq" >FAQ</a>
 												</li>
 											</ul>
 										</div>
@@ -175,7 +176,7 @@
 										</div>
 									</aside>
 									<aside id="text-2" class="widget widget_text">			
-										<div class="textwidget">©Copyright 2016 
+										<div class="textwidget">&copy;Copyright {{year}}
 										Frida Kahlo Community Organization
 										Chicago, Illinois USA
 										</div>
