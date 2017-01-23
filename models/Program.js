@@ -35,6 +35,7 @@ Program {
 	Time
 	Location : Program Location
 	featuredOnHomepage (add to list sort)
+	showInCalendar
 	
 }
 
@@ -86,6 +87,7 @@ Program.add({
 	},
 	location: {type: Types.Relationship,ref:'Program Location', index: true,label:'Program Location'},
 	featured: {type: Types.Boolean, index: true},
+	showInCalendar: {type: Types.Boolean, index: true},
 });
 
 Program.register();
@@ -128,6 +130,60 @@ Substitution.schema.plugin(deepPopulate);
 
 Substitution.register();
 
-
-
 Schedule.register();
+
+var approach = new keystone.List('Approach 2',{
+	map: { name: 'title' },
+	nodelete: true,
+	track: true,
+	nocreate: true,
+	label: 'Approach Page',
+    plural: 'Approach Page'
+});
+
+approach.add({
+	title: {type: String,label:'Page Title',noedit: true},
+	image: { type: Types.CloudinaryImage, label:'Featured Image' },
+	section1: {
+		title: { type: String},
+		description: { type: Types.Html, wysiwyg: true, height: 400 },
+		stat: {type: Types.Textarea,label:'Statistics Quote'}
+	},
+	section2: {
+		title: { type: String},
+		description: { type: Types.Html, wysiwyg: true, height: 400 }
+	},
+	video: {type: String},
+	section3: {
+		title: { type: String},
+		description: { type: Types.Html, wysiwyg: true, height: 400 }
+	},
+	stats: {
+		block1: {
+			title: {type: String},
+			value: {type: String}
+		},
+		block2: {
+			title: {type: String},
+			value: {type: String}
+		},
+		block3: {
+			title: {type: String},
+			value: {type: String}
+		},
+		block4: {
+			title: {type: String},
+			value: {type: String}
+		}
+	},
+	section4: {
+		title: { type: String},
+		description: { type: Types.Html, wysiwyg: true, height: 400 }
+	},
+	button: {
+		text: {type: String, label:'Button Text' },
+		url: {type: String, label: 'Button URL' }
+	}
+});
+
+approach.register();

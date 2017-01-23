@@ -74,11 +74,14 @@ exports = module.exports = {
 		var end   = new Date(req.query.end);
 
 		keystone.list('Program').model.find({
-			$or : [
-				{'date.start': { $gte: start } },
-				{'date.start': { $lte: end } },
-				{'date.end': { $gte: start } },
-				{'date.end': { $lte: end } }
+			$and: [
+				{showInCalendar: true},
+				{$or : [
+					{'date.start': { $gte: start } },
+					{'date.start': { $lte: end } },
+					{'date.end': { $gte: start } },
+					{'date.end': { $lte: end } }
+				]}
 			]
 		})
 		.populate('categories days')

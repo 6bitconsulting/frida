@@ -61,11 +61,17 @@
 		<section id="section-5731eea964b70" class=" fw-main-row-custom fw-section-no-padding  auto  " style="   ">
 				<div class="fw-container-fluid">
 						<div class="fw-row">
-								<div id="column-177210be8b6de76dbd86365dbeb70c2e" class="fw-col-sm-12 tf-sh-177210be8b6de76dbd86365dbeb70c2e  fw-col-no-padding">
+								<div id="map" class="scrolloff" class="fw-col-sm-12 tf-sh-177210be8b6de76dbd86365dbeb70c2e  fw-col-no-padding">
 										<div class="fw-main-row-overlay"></div>
 										<div class="fw-col-inner">
-												<div class="wrap-map fw-map  tf-sh-87c262c2bfdccb6c6e4adc21c3ca0089" data-locations="[{&quot;title&quot;:&quot;Frida Kahlo Community Organization&quot;,&quot;url&quot;:&quot;&quot;,&quot;thumb&quot;:false,&quot;coordinates&quot;:{&quot;lat&quot;:41.8580439,&quot;lng&quot;:-87.6580779},&quot;description&quot;:&quot;Melius scripta an vis, ea quando eligendi nec, mea aperiri definitiones ei. Nec ferri accumsan ponderum id, impetus iuvaret vulputate usu ei.&quot;}]" data-map-type="ROADMAP" data-map-height="500" data-unique-id="87c262c2bfdccb6c6e4adc21c3ca0089" data-location-advanced-styling="{&quot;title&quot;:{&quot;google_font&quot;:true,&quot;subset&quot;:&quot;latin-ext&quot;,&quot;variation&quot;:&quot;300&quot;,&quot;family&quot;:&quot;Lato&quot;,&quot;style&quot;:false,&quot;weight&quot;:false,&quot;size&quot;:&quot;14&quot;,&quot;line-height&quot;:&quot;26&quot;,&quot;letter-spacing&quot;:&quot;0&quot;,&quot;color-palette&quot;:&quot;&quot;,&quot;is_saved&quot;:false},&quot;description&quot;:{&quot;google_font&quot;:true,&quot;subset&quot;:&quot;latin-ext&quot;,&quot;variation&quot;:&quot;regular&quot;,&quot;family&quot;:&quot;Lato&quot;,&quot;style&quot;:false,&quot;weight&quot;:false,&quot;size&quot;:&quot;15&quot;,&quot;line-height&quot;:&quot;24&quot;,&quot;letter-spacing&quot;:&quot;0&quot;,&quot;color-palette&quot;:&quot;&quot;,&quot;is_saved&quot;:false}}" data-map-pin="{&quot;url&quot;:&quot;\/\/geekmindz.com\/freeda\/wp-content\/uploads\/2016\/04\/map_frida-1.png&quot;}" data-map-zoom="15" data-map-style="[{&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ff1a00&quot;},{&quot;invert_lightness&quot;:true},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:33},{&quot;gamma&quot;:0.5}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#2D333C&quot;}]}]" data-animation-group="{&quot;selected&quot;:&quot;no&quot;,&quot;yes&quot;:{&quot;animation&quot;:{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;delay&quot;:&quot;200&quot;}}}" data-responsive="{&quot;desktop_display&quot;:{&quot;selected&quot;:&quot;yes&quot;},&quot;tablet_landscape_display&quot;:{&quot;selected&quot;:&quot;yes&quot;},&quot;tablet_display&quot;:{&quot;selected&quot;:&quot;yes&quot;},&quot;smartphone_display&quot;:{&quot;selected&quot;:&quot;yes&quot;}}" data-class="">
-														<div class="fw-map-canvas map"></div>
+												<div class="wrap-map fw-map  tf-sh-87c262c2bfdccb6c6e4adc21c3ca0089" data-class="">
+													<iframe
+													  width="100%"
+													  height="450"
+													  frameborder="0" style="border:0"
+													  src="https://www.google.com/maps/embed/v1/place?key={{gmaps_api_key}}
+														&q=Frida+Kahlo+Community+Organization,Chicago,IL" allowfullscreen>
+													</iframe>
 												</div>
 										</div>
 								</div>
@@ -92,7 +98,7 @@
 																		<br />contact@fridacommunity.org</p>
 														</div>
 												</div>
-												<div class="fw-divider-space space-sm  clearfix"></div>
+												<div class="fw-divider-space space-md clearfix"></div>
 										</div>
 								</div>
 						</div>
@@ -111,7 +117,7 @@
 																		<input type="hidden" name="action" value="contact">
 																		<div class="fw-row">
 																				<div class="header title">
-																						<h2 class="fw-contact-form-title">CONTACT FORM</h2>
+																						<h2 class="fw-contact-form-title">CONTACT FRIDA</h2>
 																				</div>
 																		</div>
 																		<div class="fw-row">
@@ -195,10 +201,15 @@
 {% endblock %}
 
 {% block js %}
-<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?v=3.15&sensor=false&libraries=places&language=en&ver=3.15'></script>
-<script type='text/javascript' src='/js/underscore.min.js'></script>
-<script type='text/javascript' src='/js/contact.js'></script>
 <script>
+function scrollOn() {
+    $('#map').removeClass('scrolloff'); // set the pointer events true on click
+}
+
+function scrollOff() {
+    $('#map').addClass('scrolloff'); // set the pointer events true on click
+}
+
 $(function(){
 	$('.selectized').selectize({
 		create: true,
@@ -207,78 +218,3 @@ $(function(){
 });
 </script>
 {% endblock %}
-
-<!--
-	<div class="container">
-		{% if enquirySubmitted %}
-			<h3>Thanks for getting in touch.</h3>
-		{% else %}
-			<div class="row">
-				<div class="col-sm-8 col-md-6">
-					<form method="post">
-						<input type="hidden" name="action" value="contact">
-						{% set className = "" %}
-						{% if validationErrors.name %}
-							{% set className = "has-error" %}
-						{% endif %}
-						<div class="form-group {{ className }}">
-							<label>
-								<span>Name</span>
-								<input type="text" name="name.full" value="{{ formData['name.full'] | default('') }}" class="form-control">
-							</label>
-						</div>
-						{% set className = "" %}
-						{% if validationErrors.email %}
-							{% set className = "has-error" %}
-						{% endif %}
-						<div class="form-group {{ className }}">
-							<label>
-								<span>Email</span>
-								<input type="email" name="email" value="{{ formData.email | default('') }}" class="form-control">
-							</label>
-						</div>
-						<div class="form-group">
-							<label>
-								<span>Phone</span>
-								<input type="text" name="phone" value="{{ formData.phone | default('') }}" placeholder="(optional)" class="form-control">
-							</label>
-						</div>
-						{% set className = "" %}
-						{% if validationErrors.enquiryType %}
-							{% set className = "has-error" %}
-						{% endif %}
-						<div class="form-group {{ className }}">
-							<label>
-								<span>What are you contacting us about?</span>
-								<select name="enquiryType" class="form-control">
-									<option value="">(select one)</option>
-									{% for type in enquiryTypes %}
-										{% set selected = "" %}
-										{% if formData.enquiryType == type.value %}
-											{% set selected = " selected" %}
-										{% endif %}
-										<option value="{{ type.value }}"{{ selected }}>{{ type.label }}</option>
-									{% endfor %}
-								</select>
-						</div>
-						{% set className = "" %}
-						{% if validationErrors.message %}
-							{% set className = "has-error" %}
-						{% endif %}
-						<div class="form-group {{ className }}">
-							<label>
-								<span>Message</span>
-								<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">
-									{{ formData.message }}
-								</textarea>
-							</label>
-						</div>
-						<div class="form-actions">
-							<button type="submit" class="btn btn-primary">Send</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		{% endif %}
-	</div>
--->

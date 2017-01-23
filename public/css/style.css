@@ -52,8 +52,31 @@ body,.fw-text-inner {
 	color: #49ca9f;
 }
 
-.fw-row > .program{
+.program-wrapper .program{
 	margin-bottom: 30px;
+	position: relative;
+}
+
+.program > .fw-col-inner{
+	height: 100%;
+}
+
+.read-more{
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -51px;
+	width: 102px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 13px !important;
+}
+
+.program-wrapper .program{
+	padding-left: 5px;
+}
+.program-wrapper .program-img{
+	padding-right: 5px;
 }
 
 .purple-btn{
@@ -70,8 +93,6 @@ body,.fw-text-inner {
 	background: #000;
 	color: #fff;
 }
-
-
 
 .purple-btn-sm{
 	font-family: Lato;
@@ -126,4 +147,73 @@ body,.fw-text-inner {
 
 .program-brief > p{
 	font-style: normal !important;
+}
+
+.center-cropped {
+	overflow: hidden;
+	position: relative;
+}
+
+.center-cropped > .inner {
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+	min-height: 1px;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.center-cropped:not(.no-zoom) > .inner:hover{
+	transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+}
+
+.center-cropped img {
+	min-height: 100%;
+	min-width: 100%;
+	/* IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	/* IE 5-7 */
+	filter: alpha(opacity=0);
+	/* modern browsers */
+	opacity: 0;
+}
+
+.postlist .post:hover{
+	cursor: pointer;
+}
+
+.postlist .post:hover .entry-title a{
+	color: #49CA9F !important;
+}
+
+.scrolloff iframe   {
+    pointer-events: none ;
+}
+
+.bugfix{
+	padding-top: 4px;
+}
+
+.approach-video iframe{
+	height: 437px;
+	width: 832px;
 }

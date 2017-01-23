@@ -98,25 +98,27 @@
 								{% for member in team.users %}
 								<div id="column-425185af5ed8f4c0e3634f846d7cd328" class="fw-col-sm-6 fw-col-md-6 tf-sh-425185af5ed8f4c0e3634f846d7cd328  fw-animated-element" data-animation-type="fadeInUp" data-animation-delay="300">
 										<div class="fw-main-row-overlay"></div>
-										<div class="fw-col-inner">
-												<div class="fw-team tf-sh-25654cc4121c4145074df42b458e96af  fw-content-align-center">
-														<div style="width: 270px;" class="fw-team-image fw-block-image-parent ">
-																<div class="fw-block-image-child fw-ratio-1 fw-ratio-container">
-																		<noscript><img itemprop="image" src="{{member.image.secure_url}}" alt="team-member-1" data-maxdpr="1.7" width="270" class="lazyload" />
-																		</noscript><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sizes="auto" data-srcset="{{member.image.secure_url}} 1920w" alt="" data-maxdpr="1.7" width="270" class="lazyload" />
-																</div>
-														</div>
+										<a href="/about/our-team/{{member.slug}}">
+											<div class="fw-col-inner">
+													<div class="fw-team tf-sh-25654cc4121c4145074df42b458e96af  fw-content-align-center">
+															<div style="width: 270px;" class="fw-team-image fw-block-image-parent ">
+																	<div class="fw-block-image-child fw-ratio-1 fw-ratio-container">
+																			<noscript><img itemprop="image" src="{{member.image.secure_url}}" alt="team-member-1" data-maxdpr="1.7" width="270" class="lazyload" />
+																			</noscript><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sizes="auto" data-srcset="{{member.image.secure_url}} 1920w" alt="" data-maxdpr="1.7" width="270" class="lazyload" />
+																	</div>
+															</div>
 
-														<div class="fw-team-inner" style="text-align:center">
-																<div class="fw-team-name">
-																		<h3>{{member.name.first}} <span style="font-weight:900; font-family:lato; font-size:30px;">{{member.name.last}}</span></h3>
-																		<span>{{member.title|default('Team Member')}}</span>
-																</div>
+															<div class="fw-team-inner" style="text-align:center">
+																	<div class="fw-team-name">
+																			<h3>{{member.name.first}} <span style="font-weight:900; font-family:lato; font-size:30px;">{{member.name.last}}</span></h3>
+																			<span>{{member.title|default('Team Member')}}</span>
+																	</div>
 
 
-														</div>
-												</div>
-										</div>
+															</div>
+													</div>
+											</div>
+										</a>
 								</div>
 								{% endfor %}
 						</div>

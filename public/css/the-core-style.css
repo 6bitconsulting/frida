@@ -2536,7 +2536,7 @@ blockquote cite {
 .post .wrap-entry-meta .entry-date a,
 .post .wrap-entry-meta .author a,
 .post .wrap-entry-meta .cat-links a {
-    font-style: italic;
+    font-style: normal;
 }
 .post .entry-title {
     display: block;
@@ -11687,9 +11687,9 @@ blockquote cite {
 .post-tags a,
 .woocommerce.widget_product_tag_cloud .tagcloud a {
     display: inline-block;
-    font-size: 11px !important;
-    font-family: 'Oswald';
-    font-weight: 300;
+    font-size: 13px !important;
+	font-family: 'Lato';
+	font-weight: 400;
     font-style: normal;
     color: #fff !important;
     height: 32px;
@@ -12052,7 +12052,6 @@ blockquote cite {
 
 .post {
     padding-top: 45px;
-    margin-bottom: 45px;
 }
 .post.fw-content-overlay-sm {
     margin-bottom: -40px;
@@ -13090,6 +13089,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+	pointer-events: none;
 }
 .fw-overlay-1 .fw-block-image-child .fw-block-image-overlay i[class*='fw-icon-'] {
     font-family: FontAwesome;
@@ -13117,19 +13117,22 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 .fw-overlay-1 .fw-block-image-child:hover {
     cursor: pointer;
 }
-.fw-overlay-1 .fw-block-image-child:hover .fw-block-image-overlay {
+.fw-overlay-1 .fw-block-image-child:hover .fw-block-image-overlay,
+.post:hover .fw-block-image-overlay{
     opacity: 1;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-.fw-overlay-1 .fw-block-image-child:hover .fw-block-image-overlay i {
+.fw-overlay-1 .fw-block-image-child:hover .fw-block-image-overlay i,
+.post:hover .fw-block-image-overlay i{
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
 }
-.fw-overlay-1 .fw-block-image-child:hover img {
+.fw-overlay-1 .fw-block-image-child:hover img,
+.post:hover .fw-block-image-child img {
     -webkit-transform: translateZ(10px);
     -moz-transform: translateZ(10px);
     transform: translateZ(10px);

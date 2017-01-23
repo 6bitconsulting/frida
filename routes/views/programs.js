@@ -83,5 +83,45 @@ exports = module.exports = {
 		
 		view.render('calendar');
 		
-	}
+	},
+	
+	faq: function(req,res){
+		
+		var view = new keystone.View(req, res);
+		var locals = res.locals;
+		
+		locals.active = 'programs';
+		view.on('init', function(next) {
+			
+			keystone.list('FAQ').model.find({'category':'572ba265d3e227aa41103086'}).exec(function(err,results){
+				locals.faqs = results;
+				next(err);
+			});
+			
+		});
+		
+		view.render('faq');
+		
+	},
+	
+	approach: function(req,res){
+		
+		var view = new keystone.View(req, res);
+		var locals = res.locals;
+		
+		locals.active = 'programs';
+		
+		view.on('init',function(next){
+			
+			keystone.list('Approach 2').model.findOne({'_id':'588636ffeb3397d611d21ed0'}).populate('users').exec(function(err,result){
+				locals.approach = result;
+				next(err);
+			});
+			
+		});
+		
+		view.render('education-approach');
+		
+	},
+	
 };

@@ -110,7 +110,7 @@
 											<div class="fw-divider-space  fw-custom-space  fw-mobile-hide-element clearfix" style="height:90px;"></div>
 											<div class="fw-heading fw-heading-right  tf-sh-dff04a5762e223b1c2087034568a05c8">
 													<h5 class="fw-special-title">
-									<a href="/programs/rise">View all<img src="/img/wp/view-all.png" /></a>
+									<a href="/programs/all">All Programs</a>
 								</h5>
 											</div>
 											<div class="fw-divider-space  fw-custom-space  fw-mobile-hide-element clearfix" style="height:25px;"></div>
@@ -118,45 +118,34 @@
 							</div>
 					</div>
 
-					<div class="fw-row">
-							{% for program in featuredPrograms %}
-							<div class="program fw-col-sm-6 fw-col-md-3 tf-sh-b68b54db8e2e9d097952a9a8889e22de  fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="300" style="height: 326px;">
-									<div class="fw-main-row-overlay"></div>
-									<div class="fw-col-inner">
-											<div class="fw-heading fw-heading-center  tf-sh-7834a6648e1080ce59e76d47b0089b3b">
-													<h4 class="fw-special-title">{{program.title}}</h4>
-											</div>
-											<div class="fw-divider tf-sh-3b74bc71ebf8f23c2fe8a9b080825011  fw-divider-align-center fw-line-solid fw-divider-line   fw_theme_border_only_color_2" style="width:96px; padding-top:0px; margin-bottom:15px; "></div>
-											<div class="fw-text-box tf-sh-0834636544770d1f4cfa471d363bb8ac ">
-													<div class="fw-text-inner program-brief">
-															<p style="text-align: center;">
-															{{(program.content.brief|length > 150 ? program.content.brief|slice(0, 150) ~ '&hellip;' : my.text)|raw}}
-															</p>
-													</div>
-											</div>
-											<div class="fw-divider-space  fw-custom-space  clearfix" style="height:27px;"></div>
-											<div class="text-center">
-													<a href="/programs/view/{{program.slug}}" target="_self" class="fw-btn tf-sh-75a6ffc27622cf86bca674707c75eb13  fw-btn-sm   fw-btn-2" style="">
-															<span>
-																More details      		
-															</span>
-													</a>
+					<div class="fw-row programs-row">
+						{% for program in featuredPrograms %}
+						<div class="program-wrapper fw-col-sm-12 fw-col-md-6">
+							<div class="program fw-col-sm-9 fw-col-md-6 tf-sh-b68b54db8e2e9d097952a9a8889e22de  fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
+								<div class="fw-main-row-overlay"></div>
+								<div class="fw-col-inner">
+									<div class="fw-heading fw-heading-center  tf-sh-7834a6648e1080ce59e76d47b0089b3b">
+										<h4 class="fw-special-title">{{program.title}}</h4>
+									</div>
+									<div class="fw-divider tf-sh-3b74bc71ebf8f23c2fe8a9b080825011  fw-divider-align-center fw-line-solid fw-divider-line   fw_theme_border_only_color_2" style="width:96px; padding-top:0px; margin-bottom:15px; "></div>
+									<div class="fw-text-box tf-sh-0834636544770d1f4cfa471d363bb8ac">
+											<div class="fw-text-inner program-brief">
+												<p style="text-align: center;">{{(program.content.brief|length > 150 ? program.content.brief|slice(0, 150) ~ '&hellip;' : program.content.brief)|raw}}</p>
 											</div>
 									</div>
+									<a href="/programs/view/{{program.slug}}" target="_self" class="fw-btn tf-sh-e063bb1d6c761ba79b55f6fe533439f4  fw-btn-sm fw-btn-2 read-more" style="">
+										<span>Program details</span>
+									</a>
+								</div>
 							</div>
-							<div class="fw-col-sm-6 program fw-col-md-3 fw-mobile-hide-element tf-sh-0d9d29e10bfad00421294c0dcefce86c  fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="300">
-									<div class="fw-main-row-overlay"></div>
-									<div class="fw-col-inner">
-											<div class="fw-block-image-parent  fw-block-image-left" style="width: 260px; ">
-													<span class="fw-block-image-child fw-noratio fw-ratio-container">
-													<noscript>
-													<img itemprop="image" src="{{program.featuredImage.secure_url}}"  alt="" data-maxdpr="1.7" width="260" class="lazyload" />
-													</noscript>
-													<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sizes="auto" data-srcset="{{program.featuredImage.secure_url}} 1920w"   alt="" data-maxdpr="1.7" width="260" class="lazyload" /><span class="fw-after-no-ratio" style="padding-bottom: 125.38461538462%"></span> </span>
-											</div>
-									</div>
+							<div class="program-img fw-col-sm-3 fw-col-md-6 fw-mobile-hide-element tf-sh-0d9d29e10bfad00421294c0dcefce86c center-cropped no-zoom fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
+								<div class="fw-main-row-overlay"></div>
+								<div class="inner fw-col-inner" style="background-image: url('{{ program.featuredImage.secure_url }}');">
+									<img src="{{ program.featuredImage.secure_url }}" />
+								</div>
 							</div>
-							{% endfor %}
+						</div>
+						{% endfor %}
 					</div>
 
 					<div class="fw-row">
@@ -190,7 +179,7 @@
 						</div>	
 					</div>
 				</div>
-				<div id="column-c456b5c879e30f169ad72e6560359d03" class="fw-col-sm-4 fw-col-md-3 tf-sh-c456b5c879e30f169ad72e6560359d03" >
+				<div id="column-c456b5c879e30f169ad72e6560359d03" class="fw-col-sm-4 fw-col-md-3 tf-sh-c456b5c879e30f169ad72e6560359d03 bugfix" >
 					<div class="fw-main-row-overlay"></div>
 					<div class="fw-col-inner">
 						<div class="fw-text-box tf-sh-d0faa763b4561404f838d21c2c640562 help-steps" >
@@ -200,7 +189,7 @@
 						</div>	
 					</div>
 				</div>
-				<div id="column-91c11a551da59d91ee877125113b6af5" class="fw-col-sm-4 fw-col-md-3 tf-sh-91c11a551da59d91ee877125113b6af5" >
+				<div id="column-91c11a551da59d91ee877125113b6af5" class="fw-col-sm-4 fw-col-md-3 tf-sh-91c11a551da59d91ee877125113b6af5 bugfix" >
 					<div class="fw-main-row-overlay"></div>
 					<div class="fw-col-inner">
 						<div class="fw-text-box tf-sh-fba9d8ba6590739635b789f645be165d help-steps" >
@@ -210,7 +199,7 @@
 						</div>	
 					</div>
 				</div>
-				<div id="column-5d76f65fa215a8888076cfd4f8bc8e4f" class="fw-tablet-hide-element fw-col-sm-3 tf-sh-5d76f65fa215a8888076cfd4f8bc8e4f" >
+				<div id="column-5d76f65fa215a8888076cfd4f8bc8e4f" class="fw-tablet-hide-element fw-col-sm-3 tf-sh-5d76f65fa215a8888076cfd4f8bc8e4f bugfix" >
 					<div class="fw-main-row-overlay"></div>
 					<div class="fw-col-inner">
 						<div class="fw-text-box tf-sh-9860d65cad1be2458a24c3f8c18de34b help-steps" >
@@ -376,9 +365,9 @@
 
 						<div class="entry-content clearfix" itemprop="text">
 							<p>{{post.content.brief|striptags}}</p>
-							<footer class="entry-meta clearfix">
-								<a href="/blog/post/{{post.slug}}" class="fw-btn fw-btn-md fw-btn-1 purple-btn-sm" style="">
-									<span>Read More</span>
+							<footer class="entry-meta clearfix tf-sh-f321d60cc3fd21e521315066524b7b94">
+								<a href="/blog/post/{{post.slug}}" class="fw-btn fw-btn-md fw-btn-1" style="">
+									<span>Read More <i class="pull-right-icon fa fa-chevron-right" style="font-size:15px;"></i></span>
 								</a>
 							</footer>
 						</div>

@@ -67,19 +67,27 @@ exports = module.exports = function(app) {
 
 	app.get('/about/our-team',
     routes.about.ourTeam);
-
-	app.get('/about/faq',
-    routes.about.faq);
+	
+	app.get('/about/our-team/:slug',
+	routes.about.teamMemberBio);
 	
 	//Programs/Events
+	app.get('/programs/approach',
+    routes.programs.approach);
+	
+	app.get('/programs/faq',
+    routes.programs.faq);
+	
+	app.get('/programs/calendar',
+    routes.programs.calendarView);
+	
 	app.get('/programs/:category',
     routes.programs.categoryView);
 
 	app.get('/programs/view/:program',
     routes.programs.singleView);
 
-	app.get('/events-calendar',
-    routes.programs.calendarView);
+	
 	
 	//Immigration
 	app.get('/immigration/faq',

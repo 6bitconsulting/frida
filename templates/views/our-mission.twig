@@ -64,7 +64,7 @@
 														<h2 class="fw-small-title">{{approach.section2.title}}</h2>
 												</div>
 												<div class="fw-divider-space  fw-custom-space  clearfix" style="height:10px;"></div>
-												<div class="fw-text-box tf-sh-4720bdcbaa799745b16905ea83bea94f  fw-animated-element" data-animation-type="fadeInUp" data-animation-delay="300">
+												<div class="fw-text-box fw-animated-element" data-animation-type="fadeInUp" data-animation-delay="300">
 														<div class="fw-text-inner">
 																{{approach.section2.description|raw}}
 														</div>
@@ -79,8 +79,8 @@
 										<div class="fw-main-row-overlay"></div>
 										<div class="fw-col-inner">
 												<div class="fw-video tf-sh-65fedb03ec13cf1f88bfd01577e0bbdc fw-animated-element" data-animation-type="fadeInUp" data-animation-delay="300">
-														<div class="fw-wrap-boxed-media fw-wp-embed-shortcode" style="text-align: center;">
-																{{approach.video}}
+														<div class="fw-wrap-boxed-media approach-video fw-wp-embed-shortcode" style="text-align: center;">
+															
 														</div>
 												</div>
 										</div>
@@ -98,7 +98,7 @@
 
 												</div>
 												<div class="fw-divider-space  fw-custom-space  clearfix" style="height:10px;"></div>
-												<div class="fw-text-box tf-sh-75bdd4f9f269c8a781a30457f90b85ac  fw-animated-element" data-animation-type="fadeInUp" data-animation-delay="300">
+												<div class="fw-text-box fw-animated-element" data-animation-type="fadeInUp" data-animation-delay="300">
 														<div class="fw-text-inner">
 																<p>{{approach.section3.description|raw}}</p>
 														</div>
@@ -183,4 +183,14 @@
 				</div>
 		</section>
 </div>
+{% endblock %}
+{% block js %}
+<script>
+$(function(){
+	var video = $('{{approach.video}}');
+	video.attr('width','832');
+	video.attr('height','437');
+	$('.approach-video').html(video);
+});
+</script>
 {% endblock %}

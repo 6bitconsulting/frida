@@ -111,7 +111,7 @@ keystone.set('nav', {
   'Get Involved':'GetInvolved',
   'posts': ['posts', 'post-categories'],
   'FAQs':['FAQ Category','FAQ'],
-  'Programs':['Program','Program Category','Program Location'],
+  'Education':['Approach 2','Program','Program Category','Program Location'],
   'Donations':['StripeSettings', 'DonationType'],
   'galleries': 'galleries',
   'enquiries': 'enquiries',

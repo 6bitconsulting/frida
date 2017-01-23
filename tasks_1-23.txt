@@ -1,0 +1,5 @@
+clone frida approach to education approach --check
+staff member bio page.
+move faq page to education section --check
+bool show in calendar to programs, will show in front end calendar --check
+add share buttons to blog details --check

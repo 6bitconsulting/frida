@@ -13,6 +13,7 @@ exports = module.exports = function(req, res) {
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
 	locals.enquirySubmitted = false;
+	locals.gmaps_api_key = process.env.GMAPS_API_KEY;
 	
 	// On POST requests, add the Enquiry item to the database
 	view.on('post', { action: 'contact' }, function(next) {

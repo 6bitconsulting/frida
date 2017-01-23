@@ -60,28 +60,13 @@ Join Us		</span>
 								<div id="column-6c385c832b30a4caf0c6df342047c4d2" class="fw-col-sm-6 fw-col-md-3 tf-sh-6c385c832b30a4caf0c6df342047c4d2  fw-animated-element" data-animation-type="fadeInUp" data-animation-delay="700">
 										<div class="fw-main-row-overlay"></div>
 										<div class="fw-col-inner">
-												<div class="fw-imagebox clearfix fw-imagebox-1 tf-sh-314d4c23a5898e7213e2c82d92004ae0 text-center">
-														<div class="fw-block-image-parent fw-block-image-center fw-imagebox-overlay-yes fw-overlay-1">
-																<a class="fw-imagebox-image fw-block-image-child fw-ratio-1 fw-ratio-container" href="/moments/view-gallery/{{gallery.slug}}" title="Open Gallery">
-																		<noscript><img itemprop="image" src="{{ gallery.heroImage.secure_url }}" alt="gallery-img-1" data-maxdpr="1.7" width="270" class="lazyload" />
-																		</noscript><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sizes="auto" data-srcset="{{ gallery.heroImage.secure_url }} 1920w" alt="gallery-img-1" data-maxdpr="1.7" width="270" class="lazyload" />
-																		<!--
-																		<div class="fw-block-image-overlay">
-																				<div class="fw-itable">
-																						<div class="fw-icell">
-																								<i class="fw-icon-zoom"></i>
-																						</div>
-																				</div>
-																		</div>
-																		-->
-																</a>
-														</div>
-														<div class="fw-imagebox-aside" style="">
-																<div class="fw-imagebox-title-wrap">
-																		<h3 class="fw-imagebox-title"><a href="/moments/view-gallery/{{gallery.slug}}">{{gallery.name}}</a></h3>
-																</div>
-														</div>
+											<a href="/moments/view-gallery/{{gallery.slug}}" title="Open Gallery">
+												<div class="center-cropped">
+													<div class="inner" style="background-image: url('{{ gallery.heroImage.secure_url }}');">
+														<img src="{{ gallery.heroImage.secure_url }}" />
+													</div>
 												</div>
+											</a>
 										</div>
 								</div>
 								{% endfor %}
