@@ -217,3 +217,69 @@ body,.fw-text-inner {
 	height: 437px;
 	width: 832px;
 }
+
+.fw-underline-title {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 42px;
+    font-size: 30px;
+    letter-spacing: -1px;
+    color: #1e414e;
+	border-bottom: 1px solid;
+}
+
+.bio-heading{
+	margin-top: 0px;
+	line-height: 28px;
+	vertical-align: top;
+	padding-bottom: 10px;
+	font-weight: 300;
+}
+
+.bio .portrait{
+	margin: 0 auto;
+	display: block;
+	width: 300px;
+	height: auto;
+}
+
+.bio .name{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+    font-size: 24px;
+    letter-spacing: 0px;
+    color: #1e414e;
+	text-align: center;
+	padding: 5px 10px;
+}
+
+.bio .name span{
+	font-weight: 300;
+}
+
+.bio .title{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #1e414e;
+	text-align: center;
+	padding: 5px 10px;
+}
+
+.bio .email{
+	font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #1e414e;
+	text-align: center;
+	padding: 5px 10px;
+}

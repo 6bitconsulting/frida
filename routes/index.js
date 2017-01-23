@@ -72,7 +72,7 @@ exports = module.exports = function(app) {
 	routes.about.teamMemberBio);
 	
 	//Programs/Events
-	app.get('/programs/approach',
+	app.get('/programs/overview',
     routes.programs.approach);
 	
 	app.get('/programs/faq',

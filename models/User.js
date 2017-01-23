@@ -12,7 +12,7 @@ User.add({
 	name: { type: Types.Name, required: true, index: true },
 	email: { type: Types.Email, initial: true, required: true, index: true },
 	image: { type: Types.CloudinaryImage,label:'Profile Picture' },
-	bio: {type: Types.Textarea,height: 150},
+	bio: { type: Types.Html, wysiwyg: true, height: 400 },
 	title: { type: String,Label: 'Official Title'},
 	contact:{
 		email: { type: Types.Email, displayGravatar: false },
