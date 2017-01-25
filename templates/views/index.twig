@@ -10,6 +10,41 @@
 
 	<!-- slider section-->
 	<section  id="section-5730bb61e9acc" class=" fw-main-row-custom fw-main-row-top fw-section-no-padding auto" >
+		<div class="fw-row custom-nav">
+			<div class="fw-container">
+				<div class="brand fw-animated-element" data-animation-type="fadeInUp" data-animation-delay="0">
+					<a href="/">
+						<img alt="Frida" src="/images/logo.png">
+					</a>
+				</div>
+				<ul class="nav-links">
+					{% for item in navLinks %}
+					<li>
+						<a href="{{item.href}}">
+							{{item.label}}
+						</a>
+						{% if item.children %}
+						<ul class="sub-nav">
+						{% for item2 in item.children %}
+						<li>
+							<a href="{{item2.href}}">{{item2.label}}</a>
+						</li>
+						{% endfor %}
+						</ul>
+						{% endif %}
+					</li>
+					{% endfor %}
+				</ul>
+				<div class="mobile-toggle">
+					<a href="#">
+					
+					</a>
+				</div>
+				<div class="mobile-menu">
+				
+				</div>
+			</div>
+		</div>
 		<div class="fw-container-fluid" >
 			<div class="fw-row">
 				<div id="column-dd0730becb64b50102f5aaa266f80f27" class="fw-col-sm-12 tf-sh-dd0730becb64b50102f5aaa266f80f27  fw-col-no-padding" >
@@ -39,10 +74,10 @@
 								</div>
 							</div>
 							<div class="fw-fade-slider main-carousel fade-effect invisible default tf-sh-f321d60cc3fd21e521315066524b7b94">
-								<div id="tf-sh-f321d60cc3fd21e521315066524b7b94" class="myCarousel carousel slide" data-slides-interval="7500">
+								<div id="tf-sh-f321d60cc3fd21e521315066524b7b94" class="myCarousel carousel slide" data-slides-interval="5600">
 									<div class="carousel-inner">
 										{% for slide in slides %}
-										<div class="item lazyload {% if loop.first %}active{%endif%} fw-fade-slider-content-align-{{slide.alignment}}"  
+										<div class="item lazyload {% if loop.first %}active{%endif%} fw-fade-slider-content-align-left"  
 										style="background-image: url(data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==);" 
 										data-bgset="{{slide.image.secure_url}} 1920w" >
 											<div class="fw-main-row-overlay fw_theme_bg_color_3" style="opacity: 0.85;"></div>
@@ -55,15 +90,17 @@
 																	<span>{{slide.header}}</span>
 																</h1>
 															</div>
+															<!--
 															<div data-animate-in="fadeInUp" data-animate-out="fadeOutDown" class="invisible">
 																<h2 class="fw-fade-slider-title-after">
 																	<span>{{slide.subheader}}</span>
 																</h2>
 															</div>
+															-->
 															{% if slide.bvisible %}
 															<div data-animate-in="fadeInUp" data-animate-out="fadeOutDown" class="invisible">
-																<a href="{{slide.button.url}}" class="fw-btn fw-btn-md fw-btn-1" style="">
-																	<span>{{slide.button.text}} <i class="pull-right-icon fa fa-chevron-right" style="font-size:15px;"></i></span>																												</span>
+																<a href="{{slide.button.url}}" class="c-btn" style="">
+																	{{slide.button.text}}																											</span>
 																</a>
 															</div>
 															{% endif %}
@@ -98,20 +135,20 @@
 									<div class="fw-main-row-overlay"></div>
 									<div class="fw-col-inner">
 											<div class="fw-divider-space  fw-custom-space  fw-mobile-hide-element clearfix" style="height:90px;"></div>
-											<div class="fw-heading fw-heading-left  tf-sh-abbe0e5e52fd971488ab043c5d2a51d1">
-													<h3 class="fw-special-title">FEATURED PROGRAMS</h3>
+											<div class="fw-heading fw-heading-left ">
+													<h3 class="featured-programs-heading">FEATURED PROGRAMS</h3>
 											</div>
 											<div class="fw-divider-space  fw-custom-space  fw-mobile-hide-element clearfix" style="height:25px;"></div>
 									</div>
 							</div>
 							<div id="column-e28f13e7ebd687f39c3a57c57f1b4937" class="fw-col-sm-3 tf-sh-e28f13e7ebd687f39c3a57c57f1b4937  fw-animated-element" data-animation-type="fadeInUp" data-animation-delay="700">
 									<div class="fw-main-row-overlay"></div>
-									<div class="fw-col-inner">
+									<div class="fw-col-inner view-all-programs">
 											<div class="fw-divider-space  fw-custom-space  fw-mobile-hide-element clearfix" style="height:90px;"></div>
 											<div class="fw-heading fw-heading-right  tf-sh-dff04a5762e223b1c2087034568a05c8">
 													<h5 class="fw-special-title">
-									<a href="/programs/all">All Programs</a>
-								</h5>
+														<a href="/programs/all">All Programs</a>
+													</h5>
 											</div>
 											<div class="fw-divider-space  fw-custom-space  fw-mobile-hide-element clearfix" style="height:25px;"></div>
 									</div>
@@ -133,8 +170,8 @@
 												<p style="text-align: center;">{{(program.content.brief|length > 150 ? program.content.brief|slice(0, 150) ~ '&hellip;' : program.content.brief)|raw}}</p>
 											</div>
 									</div>
-									<a href="/programs/view/{{program.slug}}" target="_self" class="fw-btn tf-sh-e063bb1d6c761ba79b55f6fe533439f4  fw-btn-sm fw-btn-2 read-more" style="">
-										<span>Program details</span>
+									<a href="/programs/view/{{program.slug}}" target="_self" class="program-details-btn" style="">
+										Program Details
 									</a>
 								</div>
 							</div>
@@ -412,7 +449,9 @@
 
 {% block js %}
 <script type='text/javascript' src='/js/fade-slider.js'></script>
+<!--
 <script type='text/javascript' src='/js/moment.min.js'></script>
 <script type='text/javascript' src='/plugins/fullcalendar/fullcalendar.min.js'></script>
 <script type='text/javascript' src='/js/calendar.js'></script>
+-->
 {% endblock %}

@@ -389,7 +389,7 @@ hr.fc-divider {
 	line-height: 26px;
 	font-size: 15px;
 	letter-spacing: 0px;
-	color: #2e4751;
+	color: #fff;
 	border-color: transparent;
 	padding: 8px 0px;
 }
@@ -402,14 +402,14 @@ hr.fc-divider {
 }
 
 .fc tbody td{
-	background-color: #2e4751;
+	background-color: #777777;
 	color: #fff;
 	border-width: 3px;
-	border-color: #1b3039;
+	border-color: #000;
 }
 
 .fc td.fc-today {
-	background-color: #49ca9f;
+	background-color: #F2AD22;
 }
 
 .fc .fc-bg tbody td:hover{
@@ -417,7 +417,7 @@ hr.fc-divider {
 }
 
 .fc td.fc-other-month{
-	background-color: #5a747e;
+	background-color: #555;
 }
 
 

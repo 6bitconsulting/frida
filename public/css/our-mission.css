@@ -67,7 +67,7 @@
 	line-height: 46px;
 	font-size: 36px;
 	letter-spacing: 0px;
-	color: #49ca9f;
+	color: #E53388;
 }
 @media(max-width:767px) {
 	.tf-sh-89adc4a5624fab8e8e6d1ba69e35c833 .fw-text-inner {
@@ -186,7 +186,7 @@
 	line-height: 30px;
 	font-size: 24px;
 	letter-spacing: -0.5px;
-	color: #8224e3;
+	color: #F2AD22;
 }
 @media(max-width:767px) {
 	.tf-sh-67e2e7b209be5ea251bd82f2dcc35072 .fw-text-inner {
@@ -201,7 +201,7 @@
 	line-height: 52px;
 	font-size: 32px;
 	letter-spacing: -0.5px;
-	color: #49ca9f;
+	color: #E53388;
 }
 @media(max-width:767px) {
 	.tf-sh-30677bf8c566fe595f9b1523feec9dca .fw-text-inner {
@@ -230,7 +230,7 @@
 }
 .tf-sh-24ae4302d32f939fb2024b5c9f308750,
 .tf-sh-24ae4302d32f939fb2024b5c9f308750:focus {
-	background-color: #8224e3
+	background-color: #F2AD22
 }
 .tf-sh-24ae4302d32f939fb2024b5c9f308750:hover {
 	background-color: #1e414e

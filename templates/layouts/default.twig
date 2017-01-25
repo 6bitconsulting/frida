@@ -9,7 +9,8 @@
 		<title>{{ title|default("Frida Kahlo Community Organization | Our passion is our community") }}</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-		<link rel='stylesheet' id='ls-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+		<link rel='stylesheet' id='ls-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Lato:100,300,regular,700,900' type='text/css' media='all' />
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
 		<link rel='stylesheet' id='fw-font-awesome-css'  href='/css/font-awesome.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='bootstrap-css'  href='/css/bootstrap.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='fw-mmenu-css'  href='/css/jquery.mmenu.all.css' type='text/css' media='all' />
@@ -29,54 +30,49 @@
 		<div id="page" class="hfeed site">
 		
 			{# HEADER #}
+			{% if hideNav != true %}
 			<header class="fw-header">
 				<div class="fw-header-main">
-					<div class="fw-container">
-						<div class="fw-wrap-logo">
-
-							<a href="/" class="fw-site-logo">
-								<img src="/img/logoV1.png" alt="Frida Kahlo Community Organization" />
-							</a>
-
-						</div>
-						<div class="fw-nav-wrap" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-							<nav id="fw-menu-primary" class="fw-site-navigation primary-navigation">
-								<ul id="menu-main-menu" class="fw-nav-menu">
-									<li id="menu-item-452" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-8 menu-item-has-children menu-item-452 {% if active == 'about' %}current-menu-item{%endif%}">
-										<a href="#">FRIDA</a>
-										<ul class="sub-menu">
-											<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page page-item-8 menu-item-58"><a href="/about/our-mission" >APPROACH</a></li>
-											<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="/about/our-team" >OUR TEAM</a></li>
-										</ul>
+				
+				
+					<div class="fw-row custom-nav type-2">
+						<div class="fw-container">
+							<div class="brand">
+								<a href="/">
+									<img alt="Frida" src="/images/logo.png">
+								</a>
+							</div>
+							<ul class="nav-links">
+								{% for item in navLinks %}
+								<li {% if active == item.active %}class="current-item"{%endif%}>
+									<a href="{{item.href}}">
+										{{item.label}}
+									</a>
+									{% if item.children %}
+									<ul class="sub-nav">
+									{% for item2 in item.children %}
+									<li>
+										<a href="{{item2.href}}">{{item2.label}}</a>
 									</li>
-									<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-61 {% if active == 'programs' %}current-menu-item{%endif%}">
-										<a href="#">EDUCATION</a>
-										<ul class="sub-menu">
-											<li id="menu-item-5655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a href="/programs/overview" >OVERVIEW</a></li>
-											<li id="menu-item-879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-879"><a href="/programs/rise" >RISE</a></li>
-											<li id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880"><a href="/programs/health" >HEALTH</a></li>
-											<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="/programs/calendar" >CALENDAR</a></li>
-											<li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a href="/programs/faq" >FAQ</a></li>
-										</ul>
-									</li>
-									<li id="menu-item-878" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-878 {% if active == 'immigration' %}current-menu-item{%endif%}">
-										<a href="#">IMMIGRATION</a>
-										<ul class="sub-menu">
-										  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/immigration">APPROACH</a></li>
-										  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/immigration/faq">IMMIGRATION Q & A</a></li>
-										</ul>
-									  </li>
-									<li id="menu-item-554" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-554 {% if active == 'blog' %}current-menu-item{%endif%}"><a href="/blog" >BLOG</a></li>
-									<li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65 {% if active == 'gallery' %}current-menu-item{%endif%}"><a href="/moments" >MOMENTS</a></li>
-									<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72 {% if active == 'contact' %}current-menu-item{%endif%}"><a href="/contact" >CONTACT</a></li>
-									<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60 {% if active == 'volunteer' %}current-menu-item{%endif%}"><a href="/volunteer/get-involved" >GET INVOLVED</a></li>
-									<li id="menu-item-73" class="donate menu-item menu-item-type-post_type menu-item-object-page menu-item-73 {% if active == 'donate' %}current-menu-item{%endif%}"><a href="/volunteer/donate" >DONATE</a></li>
-								</ul>
-							</nav>
+									{% endfor %}
+									</ul>
+									{% endif %}
+								</li>
+								{% endfor %}
+							</ul>
+							<div class="mobile-toggle">
+								<a href="#">
+								
+								</a>
+							</div>
+							<div class="mobile-menu">
+							
+							</div>
 						</div>
 					</div>
 				</div>
-			</header>	
+			</header>
+			{% endif %}			
 			
 			{# BODY #}
 			<div id="main" class="site-main">
@@ -210,6 +206,7 @@
 		<script src="/js/lazysizes.min.js"></script>
 		<script src="/js/jquery.prettyPhoto.js"></script>
 		<script src="/js/general.js"></script>
+		<script src="/js/custom-nav.js"></script>
 		{% block js %}{% endblock %}
 		
 	</body>

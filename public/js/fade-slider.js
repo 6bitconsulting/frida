@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
         });
 
         slider.carousel({
-            interval: interval,
+            interval: interval || 0,
             pause: 'none'
         });
 

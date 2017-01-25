@@ -43,6 +43,9 @@ exports = module.exports = function(app) {
 	app.get('/',
     routes.index);
 	
+	app.get('/404',routes.error.notFound);
+	app.get('/5xx',routes.error.error)
+	
 	//Blog
 	app.get('/blog/:category?',
     routes.blog.list);

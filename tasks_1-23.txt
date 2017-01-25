@@ -1,5 +1,10 @@
 clone frida approach to education approach --check
-staff member bio page.
+staff member bio page. --check
 move faq page to education section --check
 bool show in calendar to programs, will show in front end calendar --check
 add share buttons to blog details --check
+new header for home page --check
+new slider for home page --check
+replace Oswald font with Poppins font, all places. --check
+new logo --check
+fix any bugs that arise and clean everything up and make sure its perfect.

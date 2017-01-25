@@ -34,34 +34,6 @@ jQuery(document).ready(function ($) {
         allowEmptyOption: true
     });
 
-    // Woocommerce if the country has regions (ex. USA)
-    if($('#billing_state_field').length > 0){
-        var states_json = wc_country_select_params.countries.replace( /&quot;/g, '"' ),
-            states = $.parseJSON( states_json );
-        $( document.body ).on( 'change', 'select.country_to_state, input.country_to_state', function() {
-            var country = $(this).val();
-
-            if (states[country]) {
-                // is select
-                if ($.isEmptyObject(states[country])) {
-                    // has no state
-                }
-                else {
-                    $('#billing_state_field select.state_select').selectize({
-                        create: true,
-                        allowEmptyOption: true
-                    });
-                }
-            }
-            else {
-                // is input
-                $('#billing_state_field .selectize-control').remove();
-            }
-        });
-    }
-
-    start_carousel_portfolio_filter();
-
     if ($(".input-styled, #ship-to-different-address, .inputs, .create-account, .inline, .bbp_widget_login .bbp-remember-me, .bbpress, .forgetmenot, .buddypress, .give-gateway-option, .give-donation-levels-wrap").length) {
         $(".input-styled input, #ship-to-different-address input, .inputs input[type='radio'], .inputs input[type='checkbox'], .create-account input, .inline #rememberme, .bbp-remember-me #rememberme, .bbpress input[type='radio'], .bbpress input[type='checkbox'], .forgetmenot #bp-login-widget-rememberme, .buddypress input[type='checkbox'], .buddypress input[type='radio'], .give-gateway-option input[type='radio'], .give-donation-levels-wrap input[type='radio']").customInput();
     }
@@ -156,18 +128,6 @@ jQuery(document).ready(function ($) {
             itemSelector: 'li'
         });
     }
-    // Woocommerce Related Products
-    if ($(".has-sidebar .related.products").length > 0) {
-        var $gridcontainer = $('ul.products').masonry();
-        $gridcontainer.masonry({
-            itemSelector: 'li'
-        });
-    }
-    // Remove background cart
-    jQuery('.shop_table.cart').parent('form').css({
-        'background-color': 'transparent',
-        'padding': '0'
-    });
 
     // Show more events
     $('.fw-show-more-events').on('click', function () {
@@ -283,258 +243,6 @@ jQuery(document).ready(function ($) {
         return [];
     }
 
-    // Responsive Menu (Mobile Menu)
-    var Mobile_Menu = function () {
-        if( jQuery('.mmenu-link').length > 0 ) return;
-        jQuery(".fw-site-navigation ul .mega-menu").hide();
-
-        jQuery('.fw-site-navigation ul .menu-item-has-mega-menu').each( function(){
-            jQuery(this).append('<ul class="sub-menu fw-mobile-mega-menu-item-list"></ul>');
-            var megaMenuInnerItems = jQuery(this).find('.mega-menu .mega-menu-row .sub-menu li').clone();
-            jQuery(this).find('.fw-mobile-mega-menu-item-list').append(megaMenuInnerItems);
-        });
-
-        // append mobile menu icon
-        if ($('.header-1, .header-2').length > 0) {
-            var mobile_menu_selector = ".fw-header .fw-header-main .fw-container";
-            jQuery('<a href="#mobile-menu" class="mmenu-link"><i class="fa fa-navicon"></i></a>').prependTo(mobile_menu_selector);
-        } else if ($('.header-3, .header-4').length > 0) {
-            var mobile_menu_selector = ".fw-header .fw-header-main .fw-nav-wrap .fw-container";
-            jQuery('<a href="#mobile-menu" class="mmenu-link"><i class="fa fa-navicon"></i></a>').prependTo(mobile_menu_selector);
-        }
-
-        var mobile_menu1 = jQuery(".fw-site-navigation#fw-menu-primary").not('.fw-header.fw-sticky-menu .fw-site-navigation#fw-menu-primary').find('.fw-nav-menu').clone();
-        // create a new menu element
-        jQuery('<nav id="mobile-menu"></nav>').prependTo(mobile_menu_selector);
-        var $menu = jQuery('#mobile-menu');
-        // append menu 1 to mobile menu
-        $menu.append(mobile_menu1);
-
-        if (jQuery('.fw-site-navigation#fw-menu-secondary').length > 0) {
-            // right menu
-            var mobile_menu2 = jQuery(".fw-site-navigation#fw-menu-secondary").not('.fw-header.fw-sticky-menu .fw-site-navigation#fw-menu-secondary').find('.fw-nav-menu').clone();
-            // append menu 2 to mobile menu (after last li)
-            jQuery('#mobile-menu > ul > li:last-child').after(mobile_menu2);
-            // remove ul #menu-right
-            jQuery('#mobile-menu #menu-right > li:first-child').unwrap();
-        }
-
-        // remove class for mega menu
-        $menu.removeClass().find('.mega-menu').remove();
-        // change id for mm-panel
-        $menu.find('ul.fw-nav-menu').attr('id', 'mobile-header-menu');
-
-        // Create menu position
-        //-> Left Position
-        var mobileMenuOpenLeft = function(){
-            $menu.mmenu({
-                counters: true,
-                extensions: [ "theme-dark", "effect-listitems-slide" ],
-                navbar: {
-                    add: true
-                },
-                offCanvas: {
-                    position: "left"
-                }
-            }, {
-                classNames: {
-                    selected: "current-menu-item"
-                }
-            });
-        };
-        //-> Right Position
-        var mobileMenuOpenRight = function(){
-            $menu.mmenu({
-                counters: true,
-                extensions: [ "theme-dark", "effect-listitems-slide" ],
-                navbar: {
-                    add: true
-                },
-                offCanvas: {
-                    position: "right"
-                }
-            }, {
-                classNames: {
-                    selected: "current-menu-item"
-                }
-            });
-        };
-        // Positionate the Menu
-        if(jQuery('.header-1.fw-top-logo-left').length){
-            mobileMenuOpenRight();
-        }
-        else{
-            mobileMenuOpenLeft();
-        }
-        anchorFn();
-    };
-    if (screenRes < 1199) {
-        Mobile_Menu();
-    }
-
-    $(window).on('resize', function(){
-        var screenRes = $(window).width();
-        if(screenRes < 1199){
-            Mobile_Menu();
-        }
-    });
-
-    // Sticky Menu
-    if(jQuery('body.fw-header-sticky').length > 0) {
-        jQuery('.fw-header').clone().addClass('fw-sticky-menu').prependTo('div.site');
-        var height_original_header = jQuery('header.fw-header').not('header.fw-header.fw-sticky-menu').outerHeight();
-
-        // make anchor form sticky menu with smooth scroll
-        anchorFn();
-
-        $(window).on('scroll', function () {
-            if(height_original_header > 300){
-                var intermediate_height = height_original_header + 250;
-            } else {
-                var intermediate_height = 400;
-            }
-
-            // add or remove class "fw-sticky-menu-open"
-            if ($(window).scrollTop() > intermediate_height) {
-                // Scroll Down
-                $('.fw-header.fw-sticky-menu').addClass('fw-sticky-menu-open');
-            } else {
-                // Scroll Up
-                $('.fw-header.fw-sticky-menu').removeClass('fw-sticky-menu-open');
-            }
-        });
-
-        // complete search form on keyup
-        jQuery('.fw-header .fw-search-form .fw-input-search').on("keyup", function() {
-            var search_input = jQuery(this).val();
-            jQuery('.fw-header .fw-search-form .fw-input-search').val(search_input);
-        });
-    }
-
-    // DropDown
-    if(screenRes > 1199){
-        jQuery(".fw-nav-menu li.menu-item-has-children").not("li.menu-item-has-mega-menu").hover(function () {
-            var $this = $(this);
-            if ($this.find('.sub-menu')) {
-                var dropdown = $this.children('ul'),
-                    dropdownWidth = dropdown.outerWidth(),
-                    dropdownOffset = parseInt(dropdown.offset().left, 10);
-                if (dropdownWidth + dropdownOffset > screenRes) {
-                    dropdown.addClass('left');
-                }
-                else {
-                    dropdown.removeClass('left');
-                }
-            }
-        });
-    }
-    // Search Icon Button
-    var miniSearch = function () {
-        var menu_height = jQuery('.fw-header-main').not('.fw-header.fw-sticky-menu .fw-header-main').outerHeight(),
-            topBar_height = jQuery('.fw-top-bar').outerHeight(),
-            page_width = jQuery('#page').width(),
-            container_menu_width = jQuery('.fw-header .fw-container').width();
-
-        var wrap_search_form = jQuery('.fw-wrap-search-form'),
-            search_input_height = menu_height / 2;
-
-        // Append the close button for search form
-        jQuery('.fw-search-form').append('<a href="#" class="fw-close-search-form"><i class="fa fa-close"></i></a>');
-
-        // Set the style for search form
-        wrap_search_form.css({
-            top: 0,
-            width: page_width,
-            height: menu_height,
-            display: 'none'
-        });
-
-        // If topbar is enable
-        if (jQuery('.fw-top-bar-on').length > 0) {
-            wrap_search_form.css({
-                top: topBar_height
-            });
-        }
-
-        // Set width for input
-        wrap_search_form.children('.fw-search-form').css({
-            width: container_menu_width,
-            marginTop: -(search_input_height / 2)
-        });
-
-        wrap_search_form.children().children('.fw-input-search').css({
-            height: search_input_height,
-            lineHeight: search_input_height + 'px'
-        });
-
-        // If sticky header is enable
-        if(jQuery('.fw-header-sticky').length > 0){
-            var sticky_menu_height = jQuery('.fw-header.fw-sticky-menu .fw-header-main').outerHeight();
-
-            var sticky_wrap_search_form = jQuery('.fw-header.fw-sticky-menu .fw-wrap-search-form'),
-                sticky_search_input_height = sticky_menu_height / 2;
-
-            // Set height for search form
-            sticky_wrap_search_form.css({
-                height: sticky_menu_height
-            });
-
-            // Set position for search form
-            sticky_wrap_search_form.children('.fw-search-form').css({
-                marginTop: -(sticky_search_input_height / 2)
-            });
-
-            // Set height for input from search form
-            sticky_wrap_search_form.children().children('.fw-input-search').css({
-                height: sticky_search_input_height,
-                lineHeight: sticky_search_input_height + 'px'
-            });
-        }
-
-        // Close the search form
-        jQuery('.fw-close-search-form').click(function (event) {
-            event.preventDefault();
-            jQuery('.fw-wrap-search-form').slideUp(300, function () {
-                wrap_search_form.removeClass('opened');
-            });
-        });
-
-        // Open the search form
-        jQuery('.fw-search-icon').click(function (event) {
-            event.preventDefault();
-            jQuery('.fw-wrap-search-form').slideDown(300, function () {
-                wrap_search_form.addClass('opened');
-            });
-
-            if(jQuery('.search-in-menu.fw-header-sticky') && jQuery(window).scrollTop() > 400){
-                jQuery('.fw-sticky-menu .fw-input-search').on('click').focus();
-            }
-            else{
-                jQuery('.fw-input-search').on('click').focus();
-            }
-        });
-
-        // Close the search form if click outside
-        jQuery(document).mouseup(function (e) {
-            var container = jQuery('.fw-wrap-search-form.fw-form-search-full');
-
-            if (!container.is(e.target) // if the target of the click isn't the container...
-                && container.has(e.target).length === 0) // ... nor a descendant of the container
-            {
-                jQuery('.fw-wrap-search-form').slideUp(300, function () {
-                    wrap_search_form.removeClass('opened');
-                });
-            }
-        });
-    };
-
-    if (jQuery('.fw-mini-search').length > 0) {
-        miniSearch();
-
-        jQuery(window).on('resize', function(){
-            miniSearch();
-        });
-    }
 
     // Toggles
     $('.toggle-link').click(function () {
@@ -578,64 +286,6 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    /**
-     * Mega Menu
-     */
-    jQuery(function ($) {
-
-        function leftSide(elem) {
-            return elem.offset().left;
-        }
-
-        function rightSide(elem) {
-            return elem.offset().left + elem.width();
-        }
-
-        function columns(mega) {
-            var columns = 0;
-            mega.children('.mega-menu-row').each(function () {
-                columns = Math.max(columns, $(this).children('.mega-menu-col').length);
-            });
-            return columns;
-        }
-
-        function megaMenu(megaMenuSelector) {
-            $(megaMenuSelector).each(function () {
-                var a = $(this);
-                var nav = a.closest('.fw-container');
-                var mega = a.find('.mega-menu');
-                var offset = rightSide(nav) - leftSide(a);
-                var col_width = 280 + 2; // 2px border left
-                var col_width2 = a.closest('.fw-container').width() / columns(mega);
-
-
-                if (columns(mega) < 4) {
-                    mega.width(Math.min(rightSide(nav), columns(mega) * col_width));
-                    mega.children('.mega-menu-row').each(function () {
-                        $(this).children('.mega-menu-col').css('width', col_width);
-                    });
-                } else {
-                    mega.width(Math.min(rightSide(nav), columns(mega) * col_width2));
-                    mega.children('.mega-menu-row').each(function () {
-                        $(this).children('.mega-menu-col').css('width', col_width2, 'important');
-                    });
-                }
-                mega.css('left', (Math.min(0, offset - mega.width())) + 15);
-            });
-        }
-
-        megaMenu('.fw-site-navigation .menu-item-has-mega-menu');
-
-        $('.fw-header .menu-item-has-mega-menu').hover(function () {
-            $(this).find('.mega-menu').css('display', 'block');
-        }, function () {
-            $(this).find('.mega-menu').css('display', 'none');
-        });
-
-        $(window).on('resize', function () {
-            megaMenu('.fw-site-navigation .menu-item-has-mega-menu');
-        })
-    });
     // Align middle the heading title but header is absolute and if section-main-row-custom it has class: fw-content-overlay-sm, fw-content-overlay-md, fw-content-overlay-lg and fw-content-overlay-custom
     function sectionTopOverlay() {
         $('.fw-main-row-top.fw-content-vertical-align-middle .fw-row').css('display', 'block');
@@ -721,7 +371,7 @@ jQuery(document).ready(function ($) {
 
     // Animate Things
     if( screenRes > 767){
-        jQuery(".fw-animated-element").each(function () {
+        $(".fw-animated-element").each(function () {
             var animationElement = $(this),
                 delayAnimation = parseInt(animationElement.data('animation-delay')) / 1000,
                 typeAnimation = animationElement.data('animation-type'),
@@ -736,7 +386,7 @@ jQuery(document).ready(function ($) {
                     'animation-delay': delayAnimation + 's'
                 });
             }
-            $(window).scroll(function () {
+            $(window).scroll(function(){
                 var top = animationElement.offset().top,
                     bottom = animationElement.outerHeight() + top,
                     scrollTop = $(this).scrollTop(),
@@ -753,7 +403,9 @@ jQuery(document).ready(function ($) {
                 }
             });
         });
-    }
+    }else{
+		$(".fw-animated-element").addClass('animated');//for mobile
+	}
 });
 
 /**
@@ -830,50 +482,7 @@ jQuery(function ($) {
             showFormError($form, inputName, message);
         });
     } while (false);
-
-    /**
-     * Ajax submit
-     */
-    // {
-        // $(document.body).on('submit', 'form[data-fw-ext-forms-type="contact-forms"]', function (e) {
-            // e.preventDefault();
-
-            // var $form = $(this);
-
-            // // todo: show loading
-            // jQuery.ajax({
-                // type: "POST",
-                // url: FwPhpVars.ajax_url,
-                // data: $(this).serialize(),
-                // dataType: 'json'
-            // }).done(function (r) {
-                // if (r.success) {
-                    // // prevent multiple submit
-                    // $form.on('submit', function (e) {
-                        // e.preventDefault();
-                        // e.stopPropagation();
-                    // });
-
-                    // $form.html(
-                        // themeGenerateFlashMessagesHtml(r.data.flash_messages)
-                    // );
-                // } else {
-                    // // hide all current error messages
-                    // $form.off(formErrorHideEventNamespace)
-                        // .find('.' + formErrorMessageClass).remove();
-
-                    // // add new error messages
-                    // $.each(r.data.errors, function (inputName, message) {
-                        // showFormError($form, inputName, message);
-                    // });
-                // }
-            // }).fail(function () {
-                // // show fail error message
-                // $form.html(FwPhpVars.fail_form_error);
-                // // todo: show server error
-            // });
-        // });
-    // }
+	
 });
 
 /**
@@ -926,37 +535,4 @@ $(window).load(function () {
 
     fnResize();
     $(window).resize(fnResize);
-});
-
-// start carousel for portfolio filter
-function start_carousel_portfolio_filter() {
-    var portfolio_filter = jQuery('.portfolio_filter');
-    if (portfolio_filter.length > 0) {
-        portfolio_filter.each(function () {
-            var filter_id = jQuery(this).attr('id');
-            jQuery('#' + filter_id).carouFredSel({
-                swipe: {
-                    onTouch: true
-                },
-                prev: '#' + filter_id + '-prev',
-                next: '#' + filter_id + '-next',
-                items: {
-                    visible: 'variable'
-                },
-                auto: {
-                    play: false
-                },
-                infinite: true,
-                scroll: {
-                    items: 1,
-                    duration: 600,
-                    easing: 'swing'
-                }
-            });
-        });
-    }
-}
-
-jQuery(window).resize(function () {
-    start_carousel_portfolio_filter();
 });

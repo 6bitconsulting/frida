@@ -11,9 +11,9 @@ var Program = new keystone.List('Program',{
 
 var ProgramCategory = new keystone.List('Program Category',{
 	map: { name: 'name' },
-	nodelete: true,
-	noedit: true,
-	nocreate: true
+	//nodelete: true,
+	//noedit: true,
+	//nocreate: true
 });
 
 ProgramCategory.add({

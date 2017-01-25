@@ -154,7 +154,6 @@ textarea {
 }
 .fw-header .fw-header-main {
     width: 100%;
-    text-align: right;
     position: relative;
     z-index: 100;
 }
@@ -1052,24 +1051,6 @@ input.fw-input-search:active {
         display: inline-block;
         width: calc(100% - 60px);
     }
-	
-	.fw-sticky-menu .fw-header-main .fw-container{
-		padding-top: 15px !important;
-		padding-bottom: 15px !important;
-	}
-	
-	.fw-sticky-menu .mmenu-link{
-		margin-top: 11px !important;
-		margin-bottom: 5px !important;
-	}
-	
-	.fw-sticky-menu .fw-site-logo{
-		text-align: left;
-	}
-	
-	.fw-sticky-menu .fw-site-logo img{
-		width: 140px;
-	}
 	
     /* Reponsive Header 2 */
     
@@ -10173,7 +10154,7 @@ textarea {
     border: 1px solid rgba(0, 0, 0, 0.13);
 }
 label {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
@@ -10253,7 +10234,7 @@ label {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -10309,7 +10290,7 @@ label {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -10326,7 +10307,7 @@ label {
     color: rgba(27, 48, 57, 0.25);
 }
 .post-password-form input[type='submit'] {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     letter-spacing: -0.5px;
@@ -10355,7 +10336,7 @@ label {
     background-color: #8224e3;
     border-color: transparent;
     border-width: 0;
-    color: #49ca9f;
+    color: #e53389;
     border-radius: 0;
 }
 .post-password-form input[type='submit'] span,
@@ -10371,11 +10352,11 @@ label {
 .post-password-form input[type='submit']:focus {
     background-color: #8224e3;
     border-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 .post-password-form input[type='submit']:hover {
-    background-color: #49ca9f;
-    color: #49ca9f;
+    background-color: #e53389;
+    color: #e53389;
 }
 .post-password-form input[type='submit']:active {
     box-shadow: none;
@@ -10514,7 +10495,7 @@ label {
     font-weight: normal;
     font-style: normal;
     font-size: 20px;
-    color: #49ca9f;
+    color: #e53389;
     letter-spacing: 1px;
     line-height: 20px;
 }
@@ -10573,7 +10554,7 @@ label {
 }
 .fw-submit-wrap:before {
     font-size: 16px;
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-submit-wrap:hover:before {
     color: #70d6b4;
@@ -10614,7 +10595,7 @@ input.fw-input-search::-webkit-input-placeholder {
     color: #70d6b4;
 }
 .fw-mini-search .fw-search-icon {
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-mini-search .fw-search-icon:hover {
     color: #70d6b4;
@@ -10663,16 +10644,16 @@ input.fw-input-search::-webkit-input-placeholder {
     top: 10.5px;
 }
 .fw-top-bar-on.search-in-top-bar.fw-top-social-right .fw-top-bar .fw-mini-search {
-    border-left: 1px solid #49ca9f;
+    border-left: 1px solid #e53389;
 }
 .fw-top-bar-on.search-in-top-bar.fw-top-social-left .fw-mini-search {
-    border-left: 1px solid #49ca9f;
+    border-left: 1px solid #e53389;
 }
 /* Top Nav Menu */
 /* -------------------------------------------------- */
 
 .fw-site-navigation > ul {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 700;
     font-style: normal;
@@ -10716,7 +10697,7 @@ input.fw-input-search::-webkit-input-placeholder {
     top: 23px;
     width: 280px;
     font-size: 16px;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     padding-top: 7px;
     padding-left: 0;
     padding-right: 0;
@@ -10770,11 +10751,11 @@ input.fw-input-search::-webkit-input-placeholder {
     top: 23px;
     padding-top: 7px;
     font-size: 16px;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
 }
 .fw-site-navigation > ul .mega-menu p {
     font-size: 15px;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
 }
 .fw-site-navigation > ul .mega-menu ul {
     background: #8224e3;
@@ -10782,12 +10763,12 @@ input.fw-input-search::-webkit-input-placeholder {
 }
 .fw-site-navigation > ul .mega-menu ul > li {
     width: 280px;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
 .fw-site-navigation > ul .mega-menu ul > li ul > li {
     font-size: 16px;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
 }
 .fw-site-navigation > ul .mega-menu > ul > li > ul > li:hover a {
     color: #ffffff;
@@ -10971,7 +10952,7 @@ body {
     background-color: #8224e3 !important;
 }
 .overlay_color_2 {
-    background-color: #49ca9f !important;
+    background-color: #e53389 !important;
 }
 .overlay_color_3 {
     background-color: #1b3039 !important;
@@ -11102,16 +11083,16 @@ body.fw-no-absolute-header .fw-main-row-top.fw-section-image.fw-content-overlay-
     padding-bottom: 120px;
 }
 .fw_theme_bg_color_1 {
-    background-color: #8224e3 !important;
+    background-color: #F2AD22 !important;
 }
 .fw_theme_hover_bg_color_1 {
     background-color: #8224e3 !important;
 }
 .fw_theme_bg_color_2 {
-    background-color: #49ca9f !important;
+    background-color: #e53389 !important;
 }
 .fw_theme_hover_bg_color_2 {
-    background-color: #49ca9f !important;
+    background-color: #e53389 !important;
 }
 .fw_theme_bg_color_3 {
     background-color: #1b3039 !important;
@@ -11135,7 +11116,7 @@ body.fw-no-absolute-header .fw-main-row-top.fw-section-image.fw-content-overlay-
     color: #8224e3 !important;
 }
 .fw_theme_text_color_2 {
-    color: #49ca9f !important;
+    color: #e53389 !important;
 }
 .fw_theme_text_color_3 {
     color: #1b3039 !important;
@@ -11150,7 +11131,7 @@ body.fw-no-absolute-header .fw-main-row-top.fw-section-image.fw-content-overlay-
     border: 1px solid #8224e3 !important;
 }
 .fw_theme_border_color_2 {
-    border: 1px solid #49ca9f !important;
+    border: 1px solid #e53389 !important;
 }
 .fw_theme_border_color_3 {
     border: 1px solid #1b3039 !important;
@@ -11165,7 +11146,7 @@ body.fw-no-absolute-header .fw-main-row-top.fw-section-image.fw-content-overlay-
     border-color: #8224e3 !important;
 }
 .fw_theme_border_only_color_2 {
-    border-color: #49ca9f !important;
+    border-color: #e53389 !important;
 }
 .fw_theme_border_only_color_3 {
     border-color: #1b3039 !important;
@@ -11180,7 +11161,7 @@ body.fw-no-absolute-header .fw-main-row-top.fw-section-image.fw-content-overlay-
     background-color: #8224e3 !important;
 }
 .fw_hover_bg_color_2:hover {
-    background-color: #49ca9f !important;
+    background-color: #e53389 !important;
 }
 .fw_hover_bg_color_3:hover {
     background-color: #1b3039 !important;
@@ -11203,19 +11184,9 @@ body {
     letter-spacing: 0px;
     color: #1e414e;
 }
-a {
-    color: #8224e3;
-}
-a:hover {
-    color: #49ca9f;
-}
-a:focus,
-a:active {
-    color: #8224e3;
-}
 h1,
 .h1 {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 52px;
@@ -11225,7 +11196,7 @@ h1,
 }
 h2,
 .h2 {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 36px;
@@ -11286,7 +11257,7 @@ blockquote .fw-symbols-quote {
 }
 blockquote cite {
     color: #1b3039;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 16px;
@@ -11328,7 +11299,7 @@ blockquote cite {
     color: #1b3039;
 }
 .widget p a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .widget:last-child {
     margin-bottom: 0;
@@ -11337,7 +11308,6 @@ blockquote cite {
     margin: 0 0 18px 0;
     font-family: 'Lato';
     font-weight: normal;
-    font-style: italic;
     font-size: 15px;
     line-height: 40px;
     position: relative;
@@ -11368,7 +11338,7 @@ blockquote cite {
     line-height: 1em;
     font-size: 1em;
     font-weight: normal;
-    color: #49ca9f;
+    color: #e53389;
     margin-bottom: 10px;
 }
 .widget ul {
@@ -11408,7 +11378,7 @@ blockquote cite {
 /* widget archive */
 
 .widget_archive ul li {
-    color: #49ca9f;
+    color: #e53389;
 }
 .widget_archive ul li a {
     font-family: 'Lato';
@@ -11420,7 +11390,7 @@ blockquote cite {
     color: #1b3039;
 }
 .widget_archive ul li a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* Styles for standard selects */
 
@@ -11429,9 +11399,9 @@ blockquote cite {
 .widget_archive select {
     height: 30px;
     padding-left: 15px;
-    color: #49ca9f;
+    color: #e53389;
     background-color: #b5bfc4;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -11443,10 +11413,10 @@ blockquote cite {
     border: none;
 }
 .widget_calendar #wp-calendar caption {
-    background: #49ca9f;
+    background: #e53389;
 }
 .widget_calendar #wp-calendar th {
-    color: #49ca9f;
+    color: #e53389;
     border: none;
     border-left: 1px solid rgba(27, 48, 57, 0.1);
 }
@@ -11457,13 +11427,13 @@ blockquote cite {
     color: #1b3039;
 }
 .widget_calendar #wp-calendar tbody a {
-    color: #49ca9f;
+    color: #e53389;
 }
 .widget_calendar #wp-calendar tbody a:hover {
-    background-color: #49ca9f;
+    background-color: #e53389;
 }
 .widget_calendar #wp-calendar tr td#today {
-    background: #49ca9f;
+    background: #e53389;
 }
 .widget_calendar #wp-calendar tfoot a:before {
     -webkit-transition: all 0.3s ease;
@@ -11481,7 +11451,7 @@ blockquote cite {
 .widget_meta ul > li,
 .widget_pages ul > li,
 .woocommerce.widget_product_categories ul > li {
-    color: #49ca9f;
+    color: #e53389;
     font-style: italic;
 }
 .widget_categories ul > li a,
@@ -11502,7 +11472,7 @@ blockquote cite {
 .widget_meta ul > li a:hover,
 .widget_pages ul > li a:hover,
 .woocommerce.widget_product_categories ul > li a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .widget_categories ul > li ul.children,
 .widget_nav_menu ul > li ul.children,
@@ -11570,13 +11540,13 @@ blockquote cite {
     transition: all 0.3s ease;
 }
 .widget_recent_comments ul li a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .widget_recent_comments ul li .comment-author-link a,
 .widget_recent_comments ul li .comment-author-link {
     font-size: 15px;
     line-height: 15px;
-    color: #49ca9f;
+    color: #e53389;
 }
 /* Recent Entries */
 
@@ -11593,7 +11563,7 @@ blockquote cite {
     transition: all 0.3s ease;
 }
 .widget_recent_entries ul li a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* RSS */
 
@@ -11610,7 +11580,7 @@ blockquote cite {
     transition: all 0.3s ease;
 }
 .widget_rss ul li .rsswidget:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .widget_rss ul li .rssSummary {
     font-size: 13px;
@@ -11635,7 +11605,7 @@ blockquote cite {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -11738,15 +11708,15 @@ blockquote cite {
 .fw-tag-links a:hover,
 .post-tags a:hover,
 .woocommerce.widget_product_tag_cloud .tagcloud a:hover {
-    background-color: #49ca9f;
+    background-color: #e53389;
     color: #fff;
 }
 .widget_tag_cloud .tagcloud a:hover:before,
 .fw-tag-links a:hover:before,
 .post-tags a:hover:before,
 .woocommerce.widget_product_tag_cloud .tagcloud a:hover:before {
-    border-right-color: #49ca9f;
-    box-shadow: 2px 0 0 -1px #49ca9f;
+    border-right-color: #e53389;
+    box-shadow: 2px 0 0 -1px #e53389;
 }
 /* Widget Text */
 
@@ -11760,7 +11730,7 @@ blockquote cite {
     color: #1b3039;
 }
 .widget_text .textwidget a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* Widget Flickr */
 
@@ -11787,7 +11757,7 @@ blockquote cite {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -11804,7 +11774,7 @@ blockquote cite {
     color: rgba(27, 48, 57, 0.25);
 }
 .fw-widget-login .forget_password {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
 }
 .fw-widget-login .forget_password a {
     font-family: 'Lato';
@@ -11815,7 +11785,7 @@ blockquote cite {
     font-size: 14px;
 }
 .fw-widget-login .forget_password a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-widget-login .submit .fw-btn-login {
     color: #fff !important;
@@ -11851,7 +11821,7 @@ blockquote cite {
     margin-bottom: 10px;
 }
 .fw-side-posts-list li .posts-content .post-title:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* Widget Twitter Feed */
 
@@ -11872,7 +11842,7 @@ blockquote cite {
     color: #1b3039;
 }
 .fw-widget-twitter .tweet-text a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-footer .fw-widget-twitter .tweet-item {
     border-bottom: 1px dashed #1a1a1a;
@@ -11892,7 +11862,7 @@ blockquote cite {
     color: #1b3039;
 }
 .fw-widget-facebook li a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-footer .fw-widget-facebook li {
     border-bottom: 1px dashed #1a1a1a;
@@ -11909,7 +11879,7 @@ blockquote cite {
     color: #1b3039;
 }
 .widget_learning_courses .fw-course-list li .course-item a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /*
  * selectize.theme.css  (for Bootstrap 3)
@@ -11987,7 +11957,7 @@ blockquote cite {
 
 .custom-checkbox label,
 .custom-radio label {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
@@ -12063,12 +12033,12 @@ blockquote cite {
     margin-bottom: -120px;
 }
 .post .wrap-entry-meta {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
 }
 .post h1.entry-title a {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 52px;
@@ -12077,7 +12047,7 @@ blockquote cite {
     color: #1b3039;
 }
 .post h2.entry-title a {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 36px;
@@ -12144,7 +12114,7 @@ blockquote cite {
     margin-bottom: 45px;
 }
 .postlist .post footer.entry-meta .footer-meta {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
 }
@@ -12163,12 +12133,12 @@ blockquote cite {
 }
 .post-list-type-2 footer.entry-meta .wrap-entry-meta .footer-meta {
     font-size: 12px;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
 }
 .post-list-type-2 footer.entry-meta .wrap-entry-meta .footer-meta a {
-    color: #49ca9f;
+    color: #e53389;
 }
 .post-list-type-2 footer.entry-meta .wrap-entry-meta .cat-links {
     font-size: 13px;
@@ -12288,7 +12258,7 @@ blockquote cite {
 /* -------------------------------------------------- */
 
 .link-add-comment {
-    color: #49ca9f;
+    color: #e53389;
 }
 .comment-list {
     margin: 0 0 45px 0;
@@ -12325,13 +12295,13 @@ blockquote cite {
     transform: scale(-1, 1);
 }
 .comment-meta {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     color: #1b3039;
 }
 .comment-author a {
-    color: #49ca9f;
+    color: #e53389;
 }
 .comment-author a:hover {
     color: #8224e3;
@@ -12347,7 +12317,7 @@ blockquote cite {
 }
 #cancel-comment-reply-link {
     border-bottom: 1px dashed #8224e3;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
 }
@@ -12376,7 +12346,7 @@ blockquote cite {
     border-color: #b3b3b3;
 }
 .comment-form .wrap-rating.in-post .rating-title {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
@@ -12418,7 +12388,7 @@ blockquote cite {
 /* -------------------------------------------------- */
 
 .comments-link {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     background-color: #8224e3;
     -webkit-transition: all 0.3s ease;
@@ -12426,7 +12396,7 @@ blockquote cite {
     transition: all 0.3s ease;
 }
 .comments-link.fw-comment-link-type-1:before {
-    background-color: #49ca9f;
+    background-color: #e53389;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -12438,13 +12408,13 @@ blockquote cite {
     transition: all 0.3s ease;
 }
 .comments-link.fw-comment-link-type-1:hover {
-    background-color: #49ca9f;
+    background-color: #e53389;
 }
 .comments-link.fw-comment-link-type-1:hover:after {
-    border-top-color: #49ca9f;
+    border-top-color: #e53389;
 }
 .comments-link.fw-comment-link-type-2:before {
-    background-color: #49ca9f;
+    background-color: #e53389;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -12456,13 +12426,13 @@ blockquote cite {
     transition: all 0.3s ease;
 }
 .comments-link.fw-comment-link-type-2:hover {
-    background-color: #49ca9f;
+    background-color: #e53389;
 }
 .comments-link.fw-comment-link-type-2:hover:after {
-    border-top-color: #49ca9f;
+    border-top-color: #e53389;
 }
 .comments-link.fw-comment-link-type-3:before {
-    background-color: #49ca9f;
+    background-color: #e53389;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -12474,10 +12444,10 @@ blockquote cite {
     transition: all 0.3s ease;
 }
 .comments-link.fw-comment-link-type-3:hover {
-    background-color: #49ca9f;
+    background-color: #e53389;
 }
 .comments-link.fw-comment-link-type-3:hover:after {
-    border-top-color: #49ca9f;
+    border-top-color: #e53389;
 }
 .comments-link.fw-comment-link-type-4 {
     background: #8224e3;
@@ -12507,7 +12477,7 @@ blockquote cite {
     transition: background 0.3s ease;
 }
 .comments-link.fw-comment-link-type-4:hover:after {
-    background-color: #49ca9f;
+    background-color: #e53389;
     -webkit-transition: background 0.3s ease;
     -o-transition: background 0.3s ease;
     transition: background 0.3s ease;
@@ -12559,19 +12529,19 @@ blockquote cite {
     transition: background 0.3s ease;
 }
 .comments-link.fw-comment-link-type-5:hover:after {
-    border-right-color: #49ca9f;
+    border-right-color: #e53389;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .comments-link.fw-comment-link-type-5:hover:before {
-    border-right-color: #49ca9f;
+    border-right-color: #e53389;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .comments-link.fw-comment-link-type-5:hover span {
-    color: #49ca9f;
+    color: #e53389;
 }
 .comments-link.fw-comment-link-type-5:hover span:after {
     -webkit-transition: all 0.3s ease;
@@ -12579,7 +12549,7 @@ blockquote cite {
     transition: all 0.3s ease;
 }
 .comments-link.fw-comment-link-type-5:hover span:before {
-    border-bottom-color: #49ca9f;
+    border-bottom-color: #e53389;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -12592,14 +12562,14 @@ blockquote cite {
 }
 .fw-related-article-image.fw-block-image-parent .fw-block-image-overlay .fw-overlay-title {
     background-color: #1b3039;
-    color: #49ca9f;
+    color: #e53389;
 }
 .postlist.postlist-grid footer .footer-meta a {
-    color: #49ca9f;
+    color: #e53389;
 }
 .postlist.postlist-grid footer .cat-links {
     font-size: 13px;
-    color: #49ca9f;
+    color: #e53389;
 }
 .postlist .sticky-icon:before {
     color: #8224e3;
@@ -12635,7 +12605,7 @@ blockquote cite {
 .paging-navigation,
 nav.woocommerce-pagination {
     padding: 60px;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     background-color: rgba(30, 65, 78, 0.1);
@@ -12655,7 +12625,7 @@ nav.woocommerce-pagination .loop-pagination {
 }
 .paging-navigation .page-numbers,
 nav.woocommerce-pagination .page-numbers {
-    color: #49ca9f;
+    color: #e53389;
     display: inline-block;
     line-height: 1.8em;
     margin-left: 10px;
@@ -12674,7 +12644,7 @@ nav.woocommerce-pagination .page-numbers.current {
 }
 .paging-navigation .page-numbers.dots,
 nav.woocommerce-pagination .page-numbers.dots {
-    color: #49ca9f;
+    color: #e53389;
 }
 .paging-navigation .page-numbers.prev,
 nav.woocommerce-pagination .page-numbers.prev,
@@ -12685,7 +12655,7 @@ nav.woocommerce-pagination .page-numbers.next {
     padding: 17px 45px;
     font-size: 18px;
     line-height: 35px;
-    background-color: #49ca9f;
+    background-color: #e53389;
     color: #fff;
 }
 .paging-navigation .page-numbers.prev i,
@@ -12745,7 +12715,7 @@ nav.woocommerce-pagination .page-numbers.disabled {
 }
 .paging-navigation .page-numbers.disabled:hover,
 nav.woocommerce-pagination .page-numbers.disabled:hover {
-    background: #49ca9f;
+    background: #e53389;
 }
 .paging-navigation.comment-navigation,
 nav.woocommerce-pagination.comment-navigation {
@@ -12759,7 +12729,7 @@ nav.woocommerce-pagination.comment-navigation .loop-pagination {
 }
 .paging-navigation.comment-navigation .page-numbers,
 nav.woocommerce-pagination.comment-navigation .page-numbers {
-    border: 2px solid #49ca9f;
+    border: 2px solid #e53389;
     padding: 6px 15px;
     font-size: 18px;
     line-height: 30px;
@@ -12772,14 +12742,14 @@ nav.woocommerce-pagination.comment-navigation .page-numbers.prev,
 nav.woocommerce-pagination.comment-navigation .page-numbers.next {
     text-transform: uppercase;
     background-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 .paging-navigation.comment-navigation .page-numbers.prev i,
 nav.woocommerce-pagination.comment-navigation .page-numbers.prev i,
 .paging-navigation.comment-navigation .page-numbers.next i,
 nav.woocommerce-pagination.comment-navigation .page-numbers.next i {
     margin: 0;
-    color: #49ca9f;
+    color: #e53389;
     font-size: 20px;
     font-weight: bold;
 }
@@ -12808,7 +12778,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     color: inherit;
 }
 .page-links a {
-    color: #49ca9f;
+    color: #e53389;
     display: inline-block;
     line-height: 1.8em;
     margin-left: 10px;
@@ -12824,7 +12794,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     color: #8224e3;
 }
 .page-links a.dots {
-    color: #49ca9f;
+    color: #e53389;
 }
 .page-links a.prev,
 .page-links a.next {
@@ -12833,7 +12803,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     padding: 17px 45px;
     font-size: 18px;
     line-height: 35px;
-    background-color: #49ca9f;
+    background-color: #e53389;
     color: #fff;
 }
 .page-links a.prev i,
@@ -12879,11 +12849,11 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     opacity: .65;
 }
 .page-links a.disabled:hover {
-    background: #49ca9f;
+    background: #e53389;
 }
 .page-links > span {
     display: inline-block;
-    color: #49ca9f;
+    color: #e53389;
     font-weight: bold;
     margin: 2px;
 }
@@ -12926,7 +12896,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 }
 .blog-post-navigation a span {
     font-size: 15px;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: normal;
     font-style: normal;
     color: #000000;
@@ -12935,7 +12905,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     text-transform: uppercase;
 }
 .blog-post-navigation a strong {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
 }
@@ -13101,7 +13071,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     color: #fff;
     display: inline-block;
     border-radius: 50%;
-    background-color: #49ca9f;
+    background-color: #e53389;
     z-index: 11;
     transform: scale(0.5);
     -webkit-transition: all 0.2s ease-in-out;
@@ -13552,7 +13522,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     color: #fff;
     display: inline-block;
     border-radius: 50%;
-    background-color: #49ca9f;
+    background-color: #e53389;
     z-index: 11;
     transform: scale(0.5);
     -webkit-transition: all 0.2s ease-in-out;
@@ -13599,7 +13569,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 }
 .fw-block-image-parent.fw-block-image-video .fw-block-image-overlay:hover i {
     border-color: transparent !important;
-    background-color: #49ca9f !important;
+    background-color: #e53389 !important;
 }
 .fw-block-image-parent.fw-block-image-video .fw-block-image-overlay i {
     transform: scale(1) !important;
@@ -13681,9 +13651,9 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     margin-bottom: 80px;
 }
 .fw-portfolio-filter li a {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-portfolio-filter li.active a,
 .fw-portfolio-filter li a:hover {
@@ -13691,7 +13661,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 }
 .fw-portfolio-filter .next,
 .fw-portfolio-filter .prev {
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-portfolio-filter .next:hover,
 .fw-portfolio-filter .prev:hover {
@@ -13821,13 +13791,13 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 /* -------------------------------------------------- */
 
 .fw-btn {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
     line-height: 30px;
     letter-spacing: -0.5px;
-    color: #49ca9f;
+    color: #e53389;
     display: inline-block;
     margin-bottom: 0;
     text-align: center;
@@ -13912,23 +13882,17 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 /* Buttons Style 1 */
 
 .fw-btn-1 {
-    background-color: #8224e3;
+    background-color: #e53389;
     border-color: transparent;
     border-width: 0;
-    color: #49ca9f;
+    color: #fff;
     border-radius: 0;
 }
-.fw-btn-1:focus {
-    background-color: #8224e3;
-    border-color: transparent;
-    color: #49ca9f;
-}
-.fw-btn-1:hover {
-    background-color: #49ca9f;
-    color: #49ca9f;
-}
+.fw-btn-1:focus,
+.fw-btn-1:hover,
 .fw-btn-1:active {
-    box-shadow: none;
+    opacity: .88;
+	color: #fff !important;
 }
 /* Buttons Style 2 */
 
@@ -13936,18 +13900,18 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     background-color: transparent;
     border-color: #8224e3;
     border-width: 2px;
-    color: #49ca9f;
+    color: #e53389;
     border-radius: 0;
 }
 .fw-btn-2:focus {
     background-color: transparent;
     border-color: #8224e3;
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-btn-2:hover {
-    background-color: #49ca9f;
-    color: #49ca9f;
-    border-color: #49ca9f;
+    background-color: #e53389;
+    color: #e53389;
+    border-color: #e53389;
 }
 .fw-btn-2:active {
     box-shadow: none;
@@ -13956,22 +13920,22 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 
 .fw-btn-3 {
     background-color: transparent;
-    border-top: 2px solid #49ca9f;
-    border-bottom: 2px solid #49ca9f;
-    color: #49ca9f;
+    border-top: 2px solid #e53389;
+    border-bottom: 2px solid #e53389;
+    color: #e53389;
     border-radius: 0px;
 }
 .fw-btn-3:focus {
     background-color: transparent;
-    border-top-color: #49ca9f;
-    border-bottom-color: #49ca9f;
-    color: #49ca9f;
+    border-top-color: #e53389;
+    border-bottom-color: #e53389;
+    color: #e53389;
 }
 .fw-btn-3:hover {
-    border-top-color: #49ca9f;
-    border-bottom-color: #49ca9f;
-    background-color: #49ca9f;
-    color: #49ca9f;
+    border-top-color: #e53389;
+    border-bottom-color: #e53389;
+    background-color: #e53389;
+    color: #e53389;
 }
 .fw-btn-3:active {
     box-shadow: none;
@@ -13979,7 +13943,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 /* Buttons Style 4 */
 
 .fw-btn-4 {
-    color: #49ca9f;
+    color: #e53389;
     border: none;
     background-color: transparent;
 }
@@ -14009,10 +13973,10 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     padding-right: 45px;
 }
 .fw-btn-4:focus {
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-btn-4:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-btn-4:active {
     box-shadow: none;
@@ -14068,7 +14032,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     color: #ffffff;
 }
 .fw-fade-slider .fw-slide-slider-button:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* Image Video Slider */
 /* -------------------------------------------------- */
@@ -14321,7 +14285,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     font-size: 0;
 }
 .fw-icon-title h1.fw-icon-title-text a {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 52px;
@@ -14330,7 +14294,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     color: #1b3039;
 }
 .fw-icon-title h2.fw-icon-title-text a {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 36px;
@@ -14468,7 +14432,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 /* -------------------------------------------------- */
 
 .fw-table table th {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: 300;
 }
@@ -14489,7 +14453,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 .fw-price-1 .fw-price-caption .fw-price-row,
 .fw-price-1 .fw-price-caption .fw-switch-row,
 .fw-price-1 .fw-price-caption .fw-price-middle {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: 300;
     font-size: 10px;
     color: #4d4d4d;
@@ -14499,7 +14463,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     line-height: 29px;
 }
 .fw-price-1 .fw-price-title {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
 }
@@ -14668,11 +14632,11 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 }
 .fw-testimonials-1 .fw-testimonials-author em,
 .fw-testimonials-1 .fw-testimonials-author .fw-testimonials-url {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
 }
 .fw-testimonials-1 .prev:hover,
 .fw-testimonials-1 .next:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .fw-testimonials-2 .fw-testimonials-text {
     background-color: #b5bfc4;
@@ -14699,7 +14663,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 }
 .fw-testimonials-2 .fw-testimonials-author em,
 .fw-testimonials-2 .fw-testimonials-author .fw-testimonials-url {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
 }
 /*Events*/
 
@@ -14729,10 +14693,10 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     background: #9c51e9;
 }
 .event-day {
-    background-color: #49ca9f;
+    background-color: #e53389;
 }
 .cal-month-day.cal-day-outmonth.event-day {
-    background-color: #49ca9f;
+    background-color: #e53389;
 }
 .cal-month-day.cal-day-outmonth.event-day:hover {
     background: #8224e3;
@@ -14749,7 +14713,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     font-style: normal;
 }
 #cal-slide-content a.event-item {
-    color: #49ca9f;
+    color: #e53389;
 }
 #cal-slide-content a.event-item:hover {
     color: #8224e3;
@@ -14763,7 +14727,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
 .calendar-navigation .next {
     font-size: 26px;
     line-height: 26px;
-    color: #49ca9f;
+    color: #e53389;
 }
 .calendar-navigation .prev:hover,
 .calendar-navigation .next:hover {
@@ -14803,7 +14767,7 @@ nav.woocommerce-pagination.comment-navigation .page-numbers span {
     background: rgba(73, 202, 159, 0.05) !important;
 }
 a.cal-event-week {
-    color: #49ca9f;
+    color: #e53389;
 }
 a.cal-event-week:hover {
     color: #8224e3;
@@ -15172,7 +15136,7 @@ a.cal-event-week:hover {
     letter-spacing: normal;
 }
 .site .fw-map-canvas .infowindow-title a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .site .fw-map-canvas .infowindow-description {
     font-family: 'Lato';
@@ -15234,14 +15198,14 @@ p.demo_store {
     color: #1e414e;
 }
 .woocommerce .woocommerce-breadcrumb a {
-    color: #49ca9f;
+    color: #e53389;
 }
 .woocommerce .woocommerce-breadcrumb a:hover {
     color: #8224e3;
 }
 .woocommerce .page-title,
 .woocommerce div.product .product_title {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-size: 36px;
     font-weight: 300;
     font-style: normal;
@@ -15283,7 +15247,7 @@ p.demo_store {
     color: #8224e3 !important;
 }
 .woocommerce-cart .woocommerce a.remove:hover {
-    color: #49ca9f !important;
+    color: #e53389 !important;
 }
 .woocommerce-cart .cart-collaterals .cart_totals {
     background-color: rgba(30, 65, 78, 0.1);
@@ -15299,12 +15263,12 @@ p.demo_store {
 
 .woocommerce-checkout .select2-container,
 .woocommerce-checkout .select2-drop {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
 }
 .woocommerce-checkout-review-order table.shop_table tfoot {
-    color: #49ca9f;
+    color: #e53389;
 }
 .woocommerce-checkout-review-order table.shop_table tfoot tr.order-total .amount {
     background-color: #8224e3;
@@ -15329,7 +15293,7 @@ p.demo_store {
 .woocommerce-page form.woocommerce-checkout fieldset legend,
 .woocommerce-page .woocommerce form fieldset legend {
     color: #1e414e;
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 0px;
@@ -15366,7 +15330,7 @@ ul.product_list_widget li a {
     font-family: 'Lato';
 }
 .woocommerce.widget_shopping_cart a.button {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     letter-spacing: -0.5px;
@@ -15443,10 +15407,10 @@ ul.product_list_widget li a {
 .woocommerce.widget_shopping_cart a.button:focus {
     background-color: #8224e3;
     border-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 .woocommerce.widget_shopping_cart a.button:hover {
-    background-color: #49ca9f;
+    background-color: #e53389;
     color: #fff !important;
 }
 .woocommerce.widget_shopping_cart a.button:active {
@@ -15462,13 +15426,13 @@ ul.product_list_widget li a {
     color: #1b3039;
 }
 .woocommerce.widget_shopping_cart a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .woocommerce.widget_shopping_cart a.remove {
     color: #1b3039 !important;
 }
 .woocommerce.widget_shopping_cart a.remove:hover {
-    color: #49ca9f !important;
+    color: #e53389 !important;
 }
 /* Woocommerce Widget Layered Nav */
 /* -------------------------------------------------- */
@@ -15492,10 +15456,10 @@ ul.product_list_widget li a {
     color: #1b3039;
 }
 .woocommerce.widget_layered_nav_filters ul li a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .woocommerce.widget_layered_nav_filters ul li a:hover:before {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* Woocommerce Widget Price Filter */
 /* -------------------------------------------------- */
@@ -15507,7 +15471,7 @@ ul.product_list_widget li a {
     background-color: #1b3039;
 }
 .woocommerce.widget_price_filter .price_slider_wrapper .ui-widget-content {
-    background-color: #49ca9f;
+    background-color: #e53389;
 }
 .woocommerce.widget_price_filter .price_slider_amount .button {
     font-size: 15px;
@@ -15538,7 +15502,7 @@ ul.product_list_widget li a {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -15579,7 +15543,7 @@ ul.product_list_widget li a {
     color: #1b3039;
 }
 .woocommerce.widget_top_rated_products ul.product_list_widget li a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* Woocommerce Widget Product & Widget Recently Viewed-Reviews Product (in sidebar) */
 /* -------------------------------------------------- */
@@ -15598,7 +15562,7 @@ ul.product_list_widget li a {
 .widget.widget_recently_viewed_products ul.product_list_widget li a:hover,
 .widget_products ul.product_list_widget li a:hover,
 .widget_recent_reviews ul.product_list_widget li a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* Woocommerce Products List */
 /* -------------------------------------------------- */
@@ -15698,7 +15662,7 @@ ul.product_list_widget li a {
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     line-height: 30px !important;
@@ -15895,7 +15859,7 @@ ul.product_list_widget li a {
 .woocommerce input.button.alt:focus {
     background-color: #8224e3;
     border-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 .woocommerce #respond input#submit:hover,
 .woocommerce a.button:hover,
@@ -15905,7 +15869,7 @@ ul.product_list_widget li a {
 .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
 .woocommerce input.button.alt:hover {
-    background-color: #49ca9f;
+    background-color: #e53389;
     color: #fff !important;
 }
 .woocommerce #respond input#submit:active,
@@ -15993,7 +15957,7 @@ ul.product_list_widget li a {
     color: #1b3039;
 }
 .widget_display_forums ul li a.bbp-forum-title:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* bbPress Widget Search */
 
@@ -16020,7 +15984,7 @@ ul.product_list_widget li a {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -16060,7 +16024,7 @@ ul.product_list_widget li a {
     color: #1b3039;
 }
 .widget_display_topics li .bbp-forum-title:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* bbPress Widget Recent Topics */
 
@@ -16074,7 +16038,7 @@ ul.product_list_widget li a {
     color: #1b3039;
 }
 .widget_display_views .bbp-view-title:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* Widget bbPress Recent Replies */
 
@@ -16090,7 +16054,7 @@ ul.product_list_widget li a {
     color: #1b3039;
 }
 .widget_display_replies li .bbp-reply-topic-title:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 /* Widget bbPress Statistics */
 
@@ -16104,7 +16068,7 @@ ul.product_list_widget li a {
     color: #1b3039;
 }
 .widget_display_stats dl[role="main"] dd strong {
-    color: #49ca9f;
+    color: #e53389;
 }
 .widget_display_stats dl[role="main"] dt,
 .widget_display_stats dl[role="main"] dd {
@@ -16119,7 +16083,7 @@ ul.product_list_widget li a {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -16139,7 +16103,7 @@ ul.product_list_widget li a {
     color: rgba(27, 48, 57, 0.25);
 }
 .bbp_widget_login .bbp-login-form .bbp-submit-wrapper .user-submit {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     letter-spacing: -0.5px;
@@ -16167,7 +16131,7 @@ ul.product_list_widget li a {
     background-color: #8224e3;
     border-color: transparent;
     border-width: 0;
-    color: #49ca9f;
+    color: #e53389;
     border-radius: 0;
     padding: 12px 25px;
     font-size: 15px;
@@ -16216,11 +16180,11 @@ ul.product_list_widget li a {
 .bbp_widget_login .bbp-login-form .bbp-submit-wrapper .user-submit:focus {
     background-color: #8224e3;
     border-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 .bbp_widget_login .bbp-login-form .bbp-submit-wrapper .user-submit:hover {
-    background-color: #49ca9f;
-    color: #49ca9f;
+    background-color: #e53389;
+    color: #e53389;
 }
 .bbp_widget_login .bbp-login-form .bbp-submit-wrapper .user-submit:active {
     box-shadow: none;
@@ -16236,7 +16200,7 @@ ul.product_list_widget li a {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -16308,7 +16272,7 @@ ul.product_list_widget li a {
     border-color: #b3b3b3;
 }
 #bbpress-forums fieldset.bbp-form .wrap-rating.in-post .rating-title {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
@@ -16345,7 +16309,7 @@ ul.product_list_widget li a {
     border-color: #b3b3b3;
 }
 #bbpress-forums fieldset.bbp-form .bbp-submit-wrapper button.button.submit {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     letter-spacing: -0.5px;
@@ -16373,7 +16337,7 @@ ul.product_list_widget li a {
     background-color: #8224e3;
     border-color: transparent;
     border-width: 0;
-    color: #49ca9f;
+    color: #e53389;
     border-radius: 0;
     padding: 12px 25px;
     font-size: 15px;
@@ -16422,11 +16386,11 @@ ul.product_list_widget li a {
 #bbpress-forums fieldset.bbp-form .bbp-submit-wrapper button.button.submit:focus {
     background-color: #8224e3;
     border-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 #bbpress-forums fieldset.bbp-form .bbp-submit-wrapper button.button.submit:hover {
-    background-color: #49ca9f;
-    color: #49ca9f;
+    background-color: #e53389;
+    color: #e53389;
 }
 #bbpress-forums fieldset.bbp-form .bbp-submit-wrapper button.button.submit:active {
     box-shadow: none;
@@ -16477,7 +16441,7 @@ ul.product_list_widget li a {
     box-shadow: none;
 }
 #bbp-user-wrapper #bbp-your-profile fieldset.submit button {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     letter-spacing: -0.5px;
@@ -16505,7 +16469,7 @@ ul.product_list_widget li a {
     background-color: #8224e3;
     border-color: transparent;
     border-width: 0;
-    color: #49ca9f;
+    color: #e53389;
     border-radius: 0;
     padding: 12px 25px;
     font-size: 15px;
@@ -16554,11 +16518,11 @@ ul.product_list_widget li a {
 #bbp-user-wrapper #bbp-your-profile fieldset.submit button:focus {
     background-color: #8224e3;
     border-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 #bbp-user-wrapper #bbp-your-profile fieldset.submit button:hover {
-    background-color: #49ca9f;
-    color: #49ca9f;
+    background-color: #e53389;
+    color: #e53389;
 }
 #bbp-user-wrapper #bbp-your-profile fieldset.submit button:active {
     box-shadow: none;
@@ -16574,7 +16538,7 @@ ul.product_list_widget li a {
 .buddypress #buddypress input[type="submit"],
 .buddypress #buddypress ul.button-nav li a,
 .buddypress a.bp-title-button {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -16604,7 +16568,7 @@ ul.product_list_widget li a {
     background-color: #8224e3;
     border-color: transparent;
     border-width: 0;
-    color: #49ca9f;
+    color: #e53389;
     border-radius: 0;
     padding: 6px 15px;
     font-size: 13px;
@@ -16772,7 +16736,7 @@ ul.product_list_widget li a {
 .buddypress a.bp-title-button:focus {
     background-color: #8224e3;
     border-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 .buddypress #buddypress .comment-reply-link:hover,
 .buddypress #buddypress .generic-button a:hover,
@@ -16782,8 +16746,8 @@ ul.product_list_widget li a {
 .buddypress #buddypress input[type="submit"]:hover,
 .buddypress #buddypress ul.button-nav li a:hover,
 .buddypress a.bp-title-button:hover {
-    background-color: #49ca9f;
-    color: #49ca9f;
+    background-color: #e53389;
+    color: #e53389;
     border: none;
 }
 .buddypress #buddypress .comment-reply-link:active,
@@ -16885,7 +16849,7 @@ ul.product_list_widget li a {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -16902,7 +16866,7 @@ ul.product_list_widget li a {
     color: rgba(27, 48, 57, 0.25);
 }
 .widget_bp_core_login_widget .standard-form input[type="submit"] {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     letter-spacing: -0.5px;
@@ -16979,10 +16943,10 @@ ul.product_list_widget li a {
 .widget_bp_core_login_widget .standard-form input[type="submit"]:focus {
     background-color: #8224e3;
     border-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 .widget_bp_core_login_widget .standard-form input[type="submit"]:hover {
-    background-color: #49ca9f;
+    background-color: #e53389;
     color: #fff !important;
 }
 .widget_bp_core_login_widget .standard-form input[type="submit"]:active {
@@ -17000,10 +16964,10 @@ ul.product_list_widget li a {
     color: #1b3039;
 }
 .widget_bp_core_members_widget .item-list .item .item-title a:hover {
-    color: #49ca9f;
+    color: #e53389;
 }
 .widget_bp_core_members_widget .item-options a {
-    color: #49ca9f;
+    color: #e53389;
 }
 .widget_bp_core_members_widget .item-options a:hover {
     color: #1b3039;
@@ -17048,7 +17012,7 @@ ul.product_list_widget li a {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -17118,7 +17082,7 @@ ul.product_list_widget li a {
 /* buddyPress Settings Page */
 
 #buddypress .standard-form#settings-form label {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
@@ -17133,7 +17097,7 @@ ul.product_list_widget li a {
 /* buddyPress Registered Form & Create Group Form */
 
 #buddypress #create-group-form.standard-form .submit#previous-next input[type="button"]#group-creation-previous {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -17163,7 +17127,7 @@ ul.product_list_widget li a {
     background-color: #8224e3;
     border-color: transparent;
     border-width: 0;
-    color: #49ca9f;
+    color: #e53389;
     border-radius: 0;
     padding: 6px 15px;
     font-size: 13px;
@@ -17212,11 +17176,11 @@ ul.product_list_widget li a {
 #buddypress #create-group-form.standard-form .submit#previous-next input[type="button"]#group-creation-previous:focus {
     background-color: #8224e3;
     border-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 #buddypress #create-group-form.standard-form .submit#previous-next input[type="button"]#group-creation-previous:hover {
-    background-color: #49ca9f;
-    color: #49ca9f;
+    background-color: #e53389;
+    color: #e53389;
     border: none;
 }
 #buddypress #create-group-form.standard-form .submit#previous-next input[type="button"]#group-creation-previous:active {
@@ -17300,7 +17264,7 @@ ul.product_list_widget li a {
 .give-btn,
 .give_submit,
 input.button[name="give_register_submit"] {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -17330,7 +17294,7 @@ input.button[name="give_register_submit"] {
     background-color: #8224e3;
     border-color: transparent;
     border-width: 0;
-    color: #49ca9f;
+    color: #e53389;
     border-radius: 0;
     padding: 6px 15px;
     font-size: 13px;
@@ -17413,13 +17377,13 @@ input.button[name="give_register_submit"].fw-btn-side-by-side:last-child {
 input.button[name="give_register_submit"]:focus {
     background-color: #8224e3;
     border-color: transparent;
-    color: #49ca9f;
+    color: #e53389;
 }
 .give-btn:hover,
 .give_submit:hover,
 input.button[name="give_register_submit"]:hover {
-    background-color: #49ca9f;
-    color: #49ca9f;
+    background-color: #e53389;
+    color: #e53389;
 }
 .give-btn:active,
 .give_submit:active,
@@ -17444,7 +17408,7 @@ table.give-table {
     border: none;
     color: #1b3039;
     background-color: rgba(0, 0, 0, 0.07000000000000001);
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
@@ -17606,7 +17570,7 @@ table.give-table {
 /* Footer Menu */
 
 .fw-footer-menu ul li {
-    font-family: 'Oswald';
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 13px;
@@ -17882,7 +17846,7 @@ table.give-table {
     background-color: #1e0000
 }
 .postlist .fw-btn-post-read-more-blog:hover {
-    background-color: #49ca9f
+    background-color: #e53389
 }
 section.fw-event .fw-special-title {
     font-family: Oswald;
