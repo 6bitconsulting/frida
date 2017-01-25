@@ -94,15 +94,7 @@
 	padding: 0px 0px 0px 0px;
   }
 }
-.tf-sh-efe80411296e992d908b6dfbf98e16ae .fw-special-title {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 65px;
-  font-size: 52px;
-  letter-spacing: -1px;
-  color: #000000;
-}
+
 @media(max-width:767px) {
   .tf-sh-efe80411296e992d908b6dfbf98e16ae .fw-special-title {
 	font-size: 31px;
@@ -182,7 +174,7 @@
   }
 }
 .tf-sh-cc8e3072a2ee71b659a3a87899264f8b .fw-special-title {
-  font-family: Lato;
+  font-family: 'Poppins',sans-serif;
   font-style: normal;
   font-weight: 100;
   line-height: 65px;

@@ -44,9 +44,6 @@
 	color: #c1c1c1;
 }
 .tf-sh-fea2fc208fb4cfdff7fb6ce0ce063333 .fw-col-inner {
-	padding: 0px 20px 0px 0px;
-}
-.tf-sh-fea2fc208fb4cfdff7fb6ce0ce063333 .fw-col-inner {
 	box-shadow: none;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -109,7 +106,7 @@
 	padding: 25px 36px 0px 36px;
 }
 .tf-sh-b68b54db8e2e9d097952a9a8889e22de {
-	background-color: #1b3039;
+	background-color: #000;
 }
 .tf-sh-b68b54db8e2e9d097952a9a8889e22de {
 	box-shadow: none;
@@ -159,7 +156,7 @@
 	line-height: 24px;
 	font-size: 15px;
 	letter-spacing: -0.5px;
-	color: #b5bfc4;
+	color: #fff;
 }
 .tf-sh-e063bb1d6c761ba79b55f6fe533439f4 {
 	border-width: 2px;

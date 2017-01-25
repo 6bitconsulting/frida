@@ -9,47 +9,6 @@ exports = module.exports = function(req, res) {
 	// item in the header navigation.
 	locals.section = 'home';
 	locals.hideNav = true;
-	locals.navLinks = [
-		{
-			label: 'Frida',
-			href: '#',
-			children: [
-				{ label: 'Approach', href: '/about/our-mission'},
-				{ label: 'Our Team', href: '/about/our-team'},
-			]
-		},
-		{
-			label: 'Education',
-			href: '#',
-			children: [
-				{ label: 'Overview', href: '/programs/overview' },
-				{ label: 'Rise', href: '/programs/rise' },
-				{ label: 'Health', href: '/programs/health' },
-				{ label: 'Calendar', href: '/programs/calendar'},
-				{ label: 'Faq', href: '/programs/faq'},
-			]
-		},
-		{
-			label: 'Immigration',
-			href: '#',
-			children: [
-				{ label: 'Approach', href: '/immigration' },
-				{ label: 'Faq', href: '/immigration/faq' },
-			]
-		},
-		{
-			label: 'Help',
-			href: '/volunteer/get-involved'
-		},
-		{
-			label: 'Contact',
-			href: '/contact'
-		},
-		{
-			label: 'Donate',
-			href: '/volunteer/donate'
-		}
-	];
 	
 	view.on('init',function(next){
 		keystone.list('Slider').model.find().sort('+sortOrder').exec(function(err,result){

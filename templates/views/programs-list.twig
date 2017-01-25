@@ -19,7 +19,7 @@
 						</div>
 
 						<div class="fw-row">
-								<div id="column-cd981a19a5cb59eb6da3b5ba2269b163" class="fw-col-sm-8 tf-sh-cd981a19a5cb59eb6da3b5ba2269b163  fw-animated-element fw-col-no-padding" data-animation-type="fadeInLeft" data-animation-delay="300">
+								<div id="column-cd981a19a5cb59eb6da3b5ba2269b163" class="fw-col-sm-8 tf-sh-cd981a19a5cb59eb6da3b5ba2269b163  fw-animated-element" data-animation-type="fadeInLeft" data-animation-delay="300">
 										<div class="fw-main-row-overlay"></div>
 										<div class="fw-col-inner">
 												<div class="fw-heading fw-heading-left">
@@ -38,7 +38,7 @@
 										<div class="fw-main-row-overlay"></div>
 										<div class="fw-col-inner">
 												<div class="fw-divider-space  fw-custom-space  clearfix" style="height:10px;"></div>
-												<a href="/volunteer/register" target="_self" class="fw-btn tf-sh-cd9d96a0089052d148ac18e330d8a2c1 fw-btn-full fw-btn-lg   fw-btn-2" style="">
+												<a href="/volunteer/register" target="_self" class="fw-btn line-btn fw-btn-full fw-btn-lg fw-btn-2" style="">
 														<span>Join Us</span>
 												</a>
 										</div>
@@ -58,31 +58,31 @@
 					{% for row in programs|batch(2) %}
 					<div class="fw-row programs-row">
 					{% for program in row %}
-						<div class="program-wrapper fw-col-sm-12 fw-col-md-6">
-							<div class="program fw-col-sm-9 fw-col-md-6 tf-sh-b68b54db8e2e9d097952a9a8889e22de  fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
-								<div class="fw-main-row-overlay"></div>
-								<div class="fw-col-inner">
-									<div class="fw-heading fw-heading-center  tf-sh-7834a6648e1080ce59e76d47b0089b3b">
-										<h4 class="fw-special-title">{{program.title}}</h4>
-									</div>
-									<div class="fw-divider tf-sh-3b74bc71ebf8f23c2fe8a9b080825011  fw-divider-align-center fw-line-solid fw-divider-line   fw_theme_border_only_color_2" style="width:96px; padding-top:0px; margin-bottom:15px; "></div>
-									<div class="fw-text-box tf-sh-0834636544770d1f4cfa471d363bb8ac">
-											<div class="fw-text-inner program-brief">
-												<p style="text-align: center;">{{(program.content.brief|length > 150 ? program.content.brief|slice(0, 150) ~ '&hellip;' : program.content.brief)|raw}}</p>
-											</div>
-									</div>
-									<a href="/programs/view/{{program.slug}}" target="_self" class="program-details-btn" style="">
-										Program Details
-									</a>
+					<div class="program-wrapper fw-col-sm-12 fw-col-md-6">
+						<div class="program fw-col-sm-9 fw-col-md-6 tf-sh-b68b54db8e2e9d097952a9a8889e22de  fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
+							<div class="fw-main-row-overlay"></div>
+							<div class="fw-col-inner">
+								<div class="fw-heading fw-heading-center  tf-sh-7834a6648e1080ce59e76d47b0089b3b">
+									<h4 class="fw-special-title">{{program.title}}</h4>
 								</div>
-							</div>
-							<div class="program-img fw-col-sm-3 fw-col-md-6 fw-mobile-hide-element tf-sh-0d9d29e10bfad00421294c0dcefce86c center-cropped no-zoom fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
-								<div class="fw-main-row-overlay"></div>
-								<div class="inner fw-col-inner" style="background-image: url('{{ program.featuredImage.secure_url }}');">
-									<img src="{{ program.featuredImage.secure_url }}" />
+								<div class="fw-divider tf-sh-3b74bc71ebf8f23c2fe8a9b080825011  fw-divider-align-center fw-line-solid fw-divider-line   fw_theme_border_only_color_2" style="width:96px; padding-top:0px; margin-bottom:15px; "></div>
+								<div class="fw-text-box tf-sh-0834636544770d1f4cfa471d363bb8ac">
+										<div class="fw-text-inner program-brief">
+											<p style="text-align: center;">{{(program.content.brief|length > 150 ? program.content.brief|slice(0, 150) ~ '&hellip;' : program.content.brief)|raw}}</p>
+										</div>
 								</div>
+								<a href="/programs/view/{{program.slug}}" target="_self" class="program-details-btn" style="">
+									Program Details
+								</a>
 							</div>
 						</div>
+						<div class="program-img fw-col-sm-3 fw-col-md-6 fw-mobile-hide-element tf-sh-0d9d29e10bfad00421294c0dcefce86c center-cropped no-zoom fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
+							<div class="fw-main-row-overlay"></div>
+							<div class="inner fw-col-inner" style="background-image: url('{{ program.featuredImage.secure_url }}');">
+								<img src="{{ program.featuredImage.secure_url }}" />
+							</div>
+						</div>
+					</div>
 					{% endfor %}
 					</div>
 					{% endfor %}
