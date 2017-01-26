@@ -27,69 +27,84 @@ exports.initLocals = function(req, res, next) {
 	
 	var locals = res.locals;
 	
-	locals.navLinks = [
-		{
-			label: 'Frida',
-			href: '#',
-			children: [
-				{ label: 'Approach', href: '/about/our-mission'},
-				{ label: 'Our Team', href: '/about/our-team'},
-			],
-			active: 'about'
-		},
-		{
-			label: 'Education',
-			href: '#',
-			children: [
-				{ label: 'Overview', href: '/programs/overview' },
-				{ label: 'Rise', href: '/programs/rise' },
-				{ label: 'Health', href: '/programs/health' },
-				{ label: 'Calendar', href: '/programs/calendar'},
-				{ label: 'Faq', href: '/programs/faq'},
-			],
-			active: 'programs'
-		},
-		{
-			label: 'Immigration',
-			href: '#',
-			children: [
-				{ label: 'Approach', href: '/immigration' },
-				{ label: 'Faq', href: '/immigration/faq' },
-			],
-			active: 'immigration'
-		},
-		{
-			label: 'Blog',
-			href: '/blog',
-			active: 'blog'
-		},
-		{
-			label: 'Moments',
-			href: '/moments',
-			active: 'gallery'
-		},
-		{
-			label: 'Contact',
-			href: '/contact',
-			active: 'contact'
-		},
-		{
-			label: 'Get Involved',
-			href: '/volunteer/get-involved',
-			active: 'volunteer'
-		},
-		{
-			label: 'Donate',
-			href: '/volunteer/donate',
-			active: 'donate'
+	keystone.list('Program Category').model.find().exec(function(err,programs){
+		
+		var edu_children = [
+			{ label: 'Overview', href: '/programs/overview' }
+		];
+		
+		for(var i=0;i<programs.length;i++){
+			
+			if(!programs[i].slug){
+				programs[i].slug = 'unset';
+			}
+			
+			edu_children.push({ label: programs[i].name, href: '/programs/'+programs[i].slug });
 		}
-	];
+		
+		edu_children.push({ label: 'Calendar', href: '/programs/calendar'});
+		edu_children.push({ label: 'Faq', href: '/programs/faq'});
+		
+		locals.navLinks = [
+			{
+				label: 'Frida',
+				href: '#',
+				children: [
+					{ label: 'Approach', href: '/about/our-mission'},
+					{ label: 'Our Team', href: '/about/our-team'},
+				],
+				active: 'about'
+			},
+			{
+				label: 'Education',
+				href: '#',
+				children: edu_children,
+				active: 'programs'
+			},
+			{
+				label: 'Immigration',
+				href: '#',
+				children: [
+					{ label: 'Approach', href: '/immigration' },
+					{ label: 'Faq', href: '/immigration/faq' },
+				],
+				active: 'immigration'
+			},
+			{
+				label: 'Blog',
+				href: '/blog',
+				active: 'blog'
+			},
+			{
+				label: 'Moments',
+				href: '/moments',
+				active: 'gallery'
+			},
+			{
+				label: 'Contact',
+				href: '/contact',
+				active: 'contact'
+			},
+			{
+				label: 'Get Involved',
+				href: '/volunteer/get-involved',
+				active: 'volunteer'
+			},
+			{
+				label: 'Donate',
+				href: '/volunteer/donate',
+				active: 'donate'
+			}
+		];
+		
+		locals.user = req.user;
+		
+		locals.year = ''+(new Date()).getFullYear();
+		
+		next();	
+	});
 	
-	locals.user = req.user;
 	
-	locals.year = ''+(new Date()).getFullYear();
-	
-	next();
 	
 };
 

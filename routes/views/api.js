@@ -157,6 +157,74 @@ exports = module.exports = {
 		
 	},
 	
+	
+	calendar2: function(req,res){
+		
+		var start = new Date(req.query.start);
+		var end   = new Date(req.query.end);
+
+		keystone.list('Program').model.find({
+			$and: [
+				{showInCalendar: true},
+				{$or : [
+					{'date.start': { $gte: start } },
+					{'date.start': { $lte: end } },
+					{'date.end': { $gte: start } },
+					{'date.end': { $lte: end } }
+				]}
+			]
+		})
+		.populate('categories days')
+		.exec(function(err,results){
+			
+			var events = [];
+			
+			var dates = {};
+			
+			var start2 = start;
+
+			while(start2 < end){
+			   var newDate = start2.setDate(start2.getDate() + 1);
+			   start2 = new Date(newDate);
+			   dates[start2.toISOString()] = [];  
+			}
+			
+			for(var date in dates){
+				for(var i=0;i<results.length;i++){
+						
+					var item = results[i];
+					
+					var cDate = new Date(date);
+					var sDate = new Date(item.date.start);
+					var eDate = new Date(item.date.end);
+					
+					if(cDate >= sDate && cDate <= eDate){
+						
+						var days = [];
+						//convert days to an array.
+						for(var k=0;k<item.days.length;k++){
+							days.push(item.days[k].name);
+						}
+						
+						if(days.indexOf(dayOfWeek(cDate)) !== -1){
+							events.push({
+								url: '/programs/view/'+item.slug,
+								start: date,
+								title: item.title,
+								allDay: true
+							});
+						}
+
+					}
+					
+				}
+			}
+			
+			finish(res,events);
+		});
+		
+	},
+	
 	adminSchedule: function(req,res){
 		
 		

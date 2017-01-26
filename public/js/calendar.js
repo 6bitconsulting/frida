@@ -8,7 +8,7 @@ $(function(){
 				var n2 = n.format('MMM YYYY');
 				$('#calendar-month').html(n2);
 			},
-			events: '/api/calendar',
+			events: '/api/calendar-2',
 			eventBackgroundColor: 'transparent',
 			eventTextColor: '#fff',
 			eventBorderColor: '#fff'
@@ -31,7 +31,7 @@ $(function(){
 				var n2 = n.format('MMM YYYY');
 				$('#calendar-month').html(n2);
 			},
-			events: '/api/calendar',
+			events: '/api/calendar-2',
 			eventBackgroundColor: 'transparent',
 			eventTextColor: '#fff',
 			eventBorderColor: '#fff'

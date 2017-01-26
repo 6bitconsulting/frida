@@ -116,6 +116,9 @@ exports = module.exports = function(app) {
 	//front end calendar api endpoint
 	app.get('/api/calendar',
     routes.api.calendar);
+	
+	app.get('/api/calendar-2',
+    routes.api.calendar2);
 
 //
 // ADMIN SITE

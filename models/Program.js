@@ -11,13 +11,15 @@ var Program = new keystone.List('Program',{
 
 var ProgramCategory = new keystone.List('Program Category',{
 	map: { name: 'name' },
+	autokey: { path: 'slug', from: 'name', unique: true }
 	//nodelete: true,
 	//noedit: true,
 	//nocreate: true
 });
 
 ProgramCategory.add({
-	name: {type: String, label:'Category Name'},
+	name: { type: String, label:'Category Name' },
+	description: { type: Types.Textarea, height: 400, label: 'Brief Description' },
 });
 
 ProgramCategory.register();

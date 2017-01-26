@@ -22,16 +22,20 @@
 								<div id="column-cd981a19a5cb59eb6da3b5ba2269b163" class="fw-col-sm-8 tf-sh-cd981a19a5cb59eb6da3b5ba2269b163  fw-animated-element" data-animation-type="fadeInLeft" data-animation-delay="300">
 										<div class="fw-main-row-overlay"></div>
 										<div class="fw-col-inner">
+												{% if program_category %}
 												<div class="fw-heading fw-heading-left">
-														<h1 class="fw-big-title">OUR <span>PROGRAMS</span></h1>
-
-
+														<h1 class="fw-big-title">{{program_category.name}}</h1>
 												</div>
 												<div class="fw-text-box">
-														<div class="fw-subheader">
-																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar eleentum vestibulum.</p>
-														</div>
+													<div class="fw-subheader">
+															<p>{{program_category.description|default('No description available')}}</p>
+													</div>
 												</div>
+												{% else %}
+												<div class="fw-heading fw-heading-left">
+														<h1 class="fw-big-title">Our <span>Programs</span></h1>
+												</div>
+												{% endif %}
 										</div>
 								</div>
 								<div id="column-fea2fc208fb4cfdff7fb6ce0ce063333" class="fw-col-sm-4 tf-sh-fea2fc208fb4cfdff7fb6ce0ce063333  fw-animated-element" data-animation-type="fadeInRight" data-animation-delay="500">

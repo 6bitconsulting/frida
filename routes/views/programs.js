@@ -12,31 +12,40 @@ exports = module.exports = {
 		
 		var cat = req.params.category;
 		
-		var id = false;
-		switch(cat){
-			case 'rise':
-				id = '5735eeccba9990eb0d1790cb';
-			break;
-			case 'health':
-				id = '5735eed7ba9990eb0d1790cc';
-			break;
-			case 'all':
-				id = false;
-			break;
-			default:
-				return res.redirect('/programs/all');
+		var id = true;
+		
+		if(cat == 'all'){
+			id = false;
 		}
+			
+		locals.program_category = false;
 		
 		view.on('init', function(next) {
 			
 			var q = keystone.list('Program').model.find();
 			
-			if(id !== false) q.where('categories').in([id]);
-			
-			q.exec(function(err,results){
-				locals.programs = results;
-				next(err);
-			});
+			if(id){
+				//look up category and get id
+				keystone.list('Program Category').model.findOne({ slug: cat }).exec(function(err,cat){
+					if(err || !cat){
+						// if error or no category by that slug, redirect to programs all.
+						return res.redirect('/programs/all');
+					}
+					locals.program_category = cat;
+					q.where('categories').in([cat._id]);
+					q.exec(function(err,results){
+						locals.programs = results;
+						next(err);
+					});
+				});
+			}else{
+				//no category, just select all programs.
+				q.exec(function(err,results){
+					locals.programs = results;
+					next(err);
+				});
+			}
+
 			
 		});
 		
