@@ -2,7 +2,6 @@
 
 {% block css %}
 <link rel='stylesheet' href="/css/index.css" type="text/css" />
-<link rel='stylesheet'  href='/plugins/fullcalendar/fullcalendar.css' type='text/css' media='all' />
 {% endblock %}
 
 {% block content %}
@@ -117,7 +116,7 @@
 											<li data-target="#tf-sh-f321d60cc3fd21e521315066524b7b94" data-slide-to="{{loop.index0}}" class="active fw-fade-slider-content-align-{{slide.alignment}} "></li>
 										{% endfor %}
 									</ol>
-									<div class="fw-first-slider-image" data-image="/img/wp/project-details-img-2.jpg"></div>
+									<div class="fw-first-slider-image" data-image="{{slides[0].image.secure_url}}"></div>
 								</div>
 							</div>
 						</div>
@@ -158,15 +157,15 @@
 					<div class="fw-row programs-row">
 						{% for program in featuredPrograms %}
 						<div class="program-wrapper fw-col-sm-12 fw-col-md-6">
-							<div class="program fw-col-sm-9 fw-col-md-6 tf-sh-b68b54db8e2e9d097952a9a8889e22de  fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
+							<div class="program fw-col-sm-9 fw-col-md-6 fw-column-height-custom fw-animated-element fw-col-no-padding" data-animation-type="fadeInUp" data-animation-delay="700" style="height: 326px;">
 								<div class="fw-main-row-overlay"></div>
 								<div class="fw-col-inner">
-									<div class="fw-heading fw-heading-center  tf-sh-7834a6648e1080ce59e76d47b0089b3b">
+									<div class="fw-heading fw-heading-center program-title">
 										<h4 class="fw-special-title">{{program.title}}</h4>
 									</div>
-									<div class="fw-divider tf-sh-3b74bc71ebf8f23c2fe8a9b080825011  fw-divider-align-center fw-line-solid fw-divider-line   fw_theme_border_only_color_2" style="width:96px; padding-top:0px; margin-bottom:15px; "></div>
-									<div class="fw-text-box tf-sh-0834636544770d1f4cfa471d363bb8ac">
-											<div class="fw-text-inner program-brief">
+									<div class="program-divider"></div>
+									<div class="fw-text-box">
+											<div class="program-brief">
 												<p style="text-align: center;">{{(program.content.brief|length > 150 ? program.content.brief|slice(0, 150) ~ '&hellip;' : program.content.brief)|raw}}</p>
 											</div>
 									</div>
@@ -423,7 +422,7 @@
 								<p>{{post.content.brief|striptags}}</p>
 								<footer class="entry-meta clearfix tf-sh-f321d60cc3fd21e521315066524b7b94">
 									<a href="/blog/post/{{post.slug}}" class="fw-btn fw-btn-md fw-btn-1" style="">
-										<span>Read More <i class="pull-right-icon fa fa-chevron-right" style="font-size:15px;"></i></span>
+										<span>Read More <i class="pull-right-icon fa fa-chevron-right fa-sm"></i></span>
 									</a>
 								</footer>
 							</div>
@@ -468,9 +467,4 @@
 
 {% block js %}
 <script type='text/javascript' src='/js/fade-slider.js'></script>
-<!--
-<script type='text/javascript' src='/js/moment.min.js'></script>
-<script type='text/javascript' src='/plugins/fullcalendar/fullcalendar.min.js'></script>
-<script type='text/javascript' src='/js/calendar.js'></script>
--->
 {% endblock %}
