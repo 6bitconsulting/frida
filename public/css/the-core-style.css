@@ -2,6 +2,10 @@
     content: "\f054";
 }
 
+.fa-remove::before, .fa-close::before, .fa-times::before {
+    content: "\f00d";
+}
+
 .fa{
 	font-family: 'FontAwesome';
 	font-style: normal;
@@ -173,7 +177,6 @@ textarea {
     z-index: 100;
 }
 
-
 .fw-header-sticky .fw-sticky-menu {
     position: fixed;
     top: 0;
@@ -207,7 +210,7 @@ html {
 }
 /* wrapper for boxed style */
 
-.site {} .single .fw-page-builder-content .fw-main-row .fw-container,
+.single .fw-page-builder-content .fw-main-row .fw-container,
 .single .fw-page-builder-content .fw-main-row-custom .fw-container,
 .single .fw-page-builder-content .fw-main-row .fw-container-fluid,
 .single .fw-page-builder-content .fw-main-row-custom .fw-container-fluid {
@@ -355,49 +358,7 @@ section {
 .fw-animated-element.animated {
     visibility: visible !important;
 }
-@media(max-width:767px) {
-    .fw-animation-mobile-off .fw-animated-element {
-        visibility: visible !important;
-    }
-}
-/* Scroll To Top Button */
 
-.scroll-to-top {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 995;
-    display: block;
-    width: 45px;
-    height: 45px;
-    text-decoration: none;
-    text-align: center;
-    border: 2px solid transparent;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-.scroll-to-top i {
-    font-size: 22px;
-    line-height: 45px;
-    position: relative;
-    top: -1px;
-}
-.scroll-to-top img {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: -15px auto auto;
-}
-.scroll-to-top:hover {
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
 /*----> Responsive <---- */
 /* Screen 568px */
 
@@ -783,152 +744,7 @@ blockquote cite {
 .wp-widget-select select option {
     padding: 3px 5px;
 }
-/* widget calendar */
 
-.widget_calendar {
-    position: relative;
-}
-.widget_calendar #wp-calendar {
-    position: relative;
-    width: 100%;
-}
-.widget_calendar #wp-calendar caption {
-    color: #fff;
-    font-size: 14px;
-    line-height: 46px;
-    padding: 0;
-    text-transform: uppercase;
-    text-align: center;
-}
-.widget_calendar #wp-calendar th {
-    padding: 12px 5px;
-    background-color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-}
-.widget_calendar #wp-calendar td {
-    font-size: 14px;
-    text-align: center;
-    border: none;
-}
-.widget_calendar #wp-calendar tbody td {
-    border: none;
-    width: 14.285%;
-    border-collapse: collapse;
-    padding: 0;
-    line-height: 3.2em;
-}
-.widget_calendar #wp-calendar tbody a {
-    display: block;
-}
-.widget_calendar #wp-calendar tbody a:hover {
-    color: #fff;
-}
-.widget_calendar #wp-calendar tr td#today {
-    color: #fff;
-}
-.widget_calendar #wp-calendar tr td#today a {
-    color: #fff;
-}
-.widget_calendar #wp-calendar tfoot {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-.widget_calendar #wp-calendar tfoot a {
-    font-size: 46px;
-    width: 46px;
-    height: 46px;
-    display: block;
-    overflow: hidden;
-    font-weight: normal;
-    padding: 0;
-}
-.widget_calendar #wp-calendar tfoot a:before {
-    font-family: 'FontAwesome';
-    font-size: 25px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 46px;
-    height: 46px;
-    line-height: 46px;
-    display: block;
-    color: #fff;
-    position: relative;
-}
-.widget_calendar #wp-calendar tfoot #prev,
-.widget_calendar #wp-calendar tfoot #next {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: none;
-    padding: 0;
-}
-.widget_calendar #wp-calendar tfoot #prev a,
-.widget_calendar #wp-calendar tfoot #next a {
-    display: block;
-}
-.widget_calendar #wp-calendar tfoot #prev a:focus:before,
-.widget_calendar #wp-calendar tfoot #next a:focus:before,
-.widget_calendar #wp-calendar tfoot #prev a:active:before,
-.widget_calendar #wp-calendar tfoot #next a:active:before {
-    top: 2px;
-}
-.widget_calendar #wp-calendar tfoot #prev a:before {
-    content: '\f104';
-}
-.widget_calendar #wp-calendar tfoot #next {
-    left: auto;
-    right: 0;
-}
-.widget_calendar #wp-calendar tfoot #next a:before {
-    content: '\f105';
-}
-/* Recent Comments */
-
-.widget_recent_comments ul li {
-    margin-bottom: 1em;
-    font-weight: normal;
-    font-style: italic;
-    color: #b6b8b9;
-}
-.widget_recent_comments ul li:last-child {
-    margin-bottom: 0;
-}
-/* Recent Entries */
-
-.widget_recent_entries ul li {
-    margin-bottom: 1em;
-}
-/* RSS */
-
-.widget_rss .widget-title a {
-    color: #b6b8b9;
-}
-.widget_rss .widget-title a:hover {
-    color: #b6b8b9;
-}
-.widget_rss .widget-title a:first-child {
-    float: left;
-    margin-right: 5px;
-    position: relative;
-    top: 10px;
-    line-height: 10px;
-}
-.widget_rss ul li {
-    margin-bottom: 1em;
-}
-.widget_rss ul li .rss-date {
-    display: block;
-}
-.widget_rss ul li cite {
-    color: #b6b8b9;
-}
 /* Widget Text */
 
 .widget_text .textwidget .wp-caption img {
@@ -936,40 +752,6 @@ blockquote cite {
 }
 .widget_text .textwidget form select {
     max-width: 100%;
-}
-/* Widget Flickr */
-
-.flickr_badge_image,
-.fw-instagram-wrap li {
-    float: left;
-    margin: 0 10px 10px 0;
-}
-.flickr_badge_image img,
-.fw-instagram-wrap li img {
-    max-width: 100%;
-    height: auto;
-}
-/* same as flickr */
-/* Widget Instagram (add the icon in button)*/
-
-.fw-widget-instagram .fw-btn-instagram span:before {
-    content: '\f16d';
-}
-/* Widget Login */
-
-.fw-widget-login .forgetmenot {
-    display: inline-block;
-    float: left;
-}
-.fw-widget-login .forget_password {
-    display: inline-block;
-    float: right;
-    font-size: 14px;
-    line-height: 1em;
-}
-.fw-widget-login .submit {
-    clear: both;
-    margin-bottom: 0;
 }
 /* Widget Posts with image */
 
@@ -1007,60 +789,7 @@ blockquote cite {
     color: #fff;
     font-weight: normal;
 }
-/* Widget Twitter Feed */
 
-.fw-widget-twitter .tweet-list {
-    margin-bottom: 0;
-}
-.fw-widget-twitter .tweet-item {
-    position: relative;
-    font-size: 0.9em;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-.fw-widget-twitter .tweet-avatar {
-    float: left;
-    margin-right: 10px;
-}
-.fw-widget-twitter .tweet-avatar img {
-    margin-top: 0.4em;
-}
-.fw-widget-twitter .tweet-avatar a {
-    display: inline-block;
-    line-height: 30px;
-    font-style: italic;
-}
-.fw-widget-twitter .tweet-text {
-    position: relative;
-    line-height: 1.3em;
-}
-.fw-widget-twitter .fw-btn-tweet a span:before {
-    content: '\f099';
-}
-/* Widget Facebook */
-
-.fw-widget-facebook .tweet-list {
-    margin-bottom: 0;
-}
-.fw-widget-facebook li {
-    position: relative;
-    font-size: 0.9em;
-    line-height: 1.3em;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-.fw-widget-facebook .fw-btn-facebook a span:before {
-    content: '\f09a';
-}
-.fw-footer .fw-widget-facebook li .facebook-post-date {
-    color: #fff;
-}
-/* Widget Language Switcher */
-
-.widget_fw_language_switcher_widget ul li img {
-    position: relative;
-    top: -0.1em;
-}
 /**
  * selectize.css (v0.11.2)
  * Copyright (c) 2013 Brian Reavis & contributors

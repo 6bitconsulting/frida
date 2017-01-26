@@ -22,8 +22,8 @@ $(function() {
     // Remove outline in IE
     $("a, input, textarea").attr("hideFocus", "true").css("outline", "none");
 
-    if ($('select[class*="select-"]').length > 0) {
-        $('select[class*="select-"]').selectize({
+    if ($('select[class*="select-"],select.selectize').length > 0) {
+        $('select[class*="select-"],select.selectize').selectize({
             create: true
         });
     }

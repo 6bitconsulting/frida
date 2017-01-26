@@ -1,23 +1,21 @@
 {% macro renderMessages(messages) %}
 	{% if messages %}
 		{% import _self as Self %}
-		if(debug){
+		{% if debug %}
 			<pre>{{ dump(messages) }}</pre>
-		}
-		<div id="flash-messages" class="container">
-			{% for message in messages.info %}
-				{{ Self.renderMessage(message, "info") }}
-			{% endfor %}
-			{% for message in messages.success %}
-				{{ Self.renderMessage(message, "success") }}
-			{% endfor %}
-			{% for message in messages.warning %}
-				{{ Self.renderMessage(message, "warning") }}
-			{% endfor %}
-			{% for message in messages.error %}
-				{{ Self.renderMessage(message, "danger") }}
-			{% endfor %}
-		</div>
+		{% endif %}
+		{% for message in messages.info %}
+			{{ Self.renderMessage(message, "info") }}
+		{% endfor %}
+		{% for message in messages.success %}
+			{{ Self.renderMessage(message, "success") }}
+		{% endfor %}
+		{% for message in messages.warning %}
+			{{ Self.renderMessage(message, "warning") }}
+		{% endfor %}
+		{% for message in messages.error %}
+			{{ Self.renderMessage(message, "danger") }}
+		{% endfor %}
 	{% endif %}
 {% endmacro %}
 

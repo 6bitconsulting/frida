@@ -80,11 +80,6 @@
 				{# The Intro block appears above flash messages (used for temporary information display) #}
 				{% block intro %}{% endblock %}
 
-				{% if messages is defined %}
-				{% import "../mixins/flash-messages.twig" as FlashMessages %}
-				{{ FlashMessages.renderMessages(messages) }}
-				{% endif %}
-
 				{# The content block should contain the body of your template"s content #}
 				{% block content %}{% endblock %}
 			</div>

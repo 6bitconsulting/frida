@@ -20,14 +20,27 @@
 						{% import "../mixins/flash-messages.twig" as FlashMessages %}
 						{% if enquirySubmitted %}
 						<div class="fw-row">
-								<div id="column-cd981a19a5cb59eb6da3b5ba2269b163" class="fw-col-sm-12 fw-col-md-8 tf-sh-cd981a19a5cb59eb6da3b5ba2269b163  fw-animated-element fw-col-no-padding" data-animation-type="fadeInLeft" data-animation-delay="300">
-										<div class="fw-main-row-overlay"></div>
-										<div class="fw-col-inner">
-											{{ FlashMessages.renderMessage("Thank you for contacting us. We'll get back to you shortly!",'success') }}
-										</div>
+							<div id="column-cd981a19a5cb59eb6da3b5ba2269b163" class="fw-col-sm-12 tf-sh-cd981a19a5cb59eb6da3b5ba2269b163  fw-animated-element fw-col-no-padding" data-animation-type="fadeInLeft" data-animation-delay="300">
+								<div class="fw-main-row-overlay"></div>
+								<div class="fw-col-inner">
+									{{ FlashMessages.renderMessage("Thank you for contacting us. We'll get back to you shortly!",'success') }}
 								</div>
+							</div>
 						</div>
 						{% endif %}
+						
+						{% if messages is defined %}
+						{% import "../mixins/flash-messages.twig" as FlashMessages %}
+						<div class="fw-row">
+							<div id="column-cd981a19a5cb59eb6da3b5ba2269b163" class="fw-col-sm-12 tf-sh-cd981a19a5cb59eb6da3b5ba2269b163  fw-animated-element fw-col-no-padding" data-animation-type="fadeInLeft" data-animation-delay="300">
+								<div class="fw-main-row-overlay"></div>
+								<div class="fw-col-inner">
+									{{ FlashMessages.renderMessages(messages) }}
+								</div>
+							</div>
+						</div>
+						{% endif %}
+				
 
 						<div class="fw-row">
 								<div id="column-cd981a19a5cb59eb6da3b5ba2269b163" class="fw-col-sm-12 fw-col-md-8 tf-sh-cd981a19a5cb59eb6da3b5ba2269b163  fw-animated-element fw-col-no-padding" data-animation-type="fadeInLeft" data-animation-delay="300">
@@ -141,7 +154,7 @@
 																								<select name="referralSource" class="selectized" required>
 																									<option value=""></option>
 																									{% for opt in refTypes %}
-																									<option value="{{opt.value}}">{{opt.label}}</option>
+																									<option value="{{opt.value}}" {% if formData.referralSource == opt.value %}selected{%endif%}>{{opt.label}}</option>
 																									{% endfor %}
 																								</select>
 																						</div>
@@ -152,7 +165,7 @@
 																								<select name="personType" class="selectized" required>
 																									<option value=""></option>
 																									{% for opt in perTypes %}
-																									<option value="{{opt.value}}">{{opt.label}}</option>
+																									<option value="{{opt.value}}" {% if formData.personType == opt.value %}selected{%endif%}>{{opt.label}}</option>
 																									{% endfor %}
 																								</select>
 																						</div>
@@ -162,7 +175,7 @@
 																				<div class="fw-col-xs-12 form-builder-item">
 																						<div class="field-textarea">
 																								<label>Your Message</label>
-																								<textarea name="message" placeholder="Your message here..." id="id-3" required="required"></textarea>
+																								<textarea name="message" placeholder="Your message here..." id="id-3" required="required">{{formData.message}}</textarea>
 																						</div>
 																				</div>
 																		</div>

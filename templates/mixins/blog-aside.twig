@@ -41,8 +41,8 @@
 				<aside id="categories-2" class="widget widget_categories">
 						<h2 class="widget-title"><span>Categories</span></h2>
 						<label class="screen-reader-text" for="cat">Categories</label>
-						<select name='cat' id='cat' class='postform'>
-								<option value="/blog">Select Category</option>
+						<select name='cat' id='cat' class='postform selectize'>
+								<option value="/blog">All</option>
 								{% for cat in data.categories %}
 								<option value="/blog/{{ cat.key }}" {% if data.category and data.category.id == cat.id %}selected="selected"{% endif %}>{{ cat.name }}</option>
 								{% endfor %}
