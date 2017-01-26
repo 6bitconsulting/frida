@@ -1,6 +1,5 @@
-jQuery(document).ready(function ($) {
+$(function() {
     "use strict";
-    var $ = jQuery;
     var screenRes = $(window).width(),
         screenHeight = $(window).height(),
         html = $('html');
@@ -27,15 +26,6 @@ jQuery(document).ready(function ($) {
         $('select[class*="select-"]').selectize({
             create: true
         });
-    }
-
-    $('select[name="archive-dropdown"], select[name="cat"], select[name="monster-widget-just-testing"], .woocommerce-ordering .orderby, .dropdown_product_cat, select.country_select, select.state_select, #calc_shipping_country, .bbpress select, .buddypress select, .give-select').selectize({
-        create: true,
-        allowEmptyOption: true
-    });
-
-    if ($(".input-styled, #ship-to-different-address, .inputs, .create-account, .inline, .bbp_widget_login .bbp-remember-me, .bbpress, .forgetmenot, .buddypress, .give-gateway-option, .give-donation-levels-wrap").length) {
-        $(".input-styled input, #ship-to-different-address input, .inputs input[type='radio'], .inputs input[type='checkbox'], .create-account input, .inline #rememberme, .bbp-remember-me #rememberme, .bbpress input[type='radio'], .bbpress input[type='checkbox'], .forgetmenot #bp-login-widget-rememberme, .buddypress input[type='checkbox'], .buddypress input[type='radio'], .give-gateway-option input[type='radio'], .give-donation-levels-wrap input[type='radio']").customInput();
     }
 
     // prettyPhoto lightbox, check if <a> has atrr data-rel and hide for Mobiles
@@ -95,8 +85,8 @@ jQuery(document).ready(function ($) {
 					</div> \
 					<div class="pp_overlay"></div>',
             changepicturecallback: function () {
-                var $holder = jQuery('.pp_nav .currentTextHolder'),
-                    $closeButton = jQuery('.pp_close'),
+                var $holder = $('.pp_nav .currentTextHolder'),
+                    $closeButton = $('.pp_close'),
                     splitted = $holder.text().split('/');
                 $closeButton.addClass('fa fa-times');
 
@@ -164,18 +154,18 @@ jQuery(document).ready(function ($) {
     // Detect Click in Iframe
     function detectIframeClick() {
         var overiFrame = -1;
-        jQuery('.myCarousel').find('iframe').hover(function () {
+        $('.myCarousel').find('iframe').hover(function () {
             overiFrame = 1;
         }, function () {
             overiFrame = -1
         });
         $(window).on('blur', function () {
             if (overiFrame != -1) {
-                jQuery('.myCarousel').carousel('pause');
+                $('.myCarousel').carousel('pause');
             }
         });
-        jQuery('.carousel-control, .carousel-indicators li').click(function () {
-            jQuery('.myCarousel').carousel('cycle');
+        $('.carousel-control, .carousel-indicators li').click(function () {
+            $('.myCarousel').carousel('cycle');
         });
     }
     detectIframeClick();
@@ -212,18 +202,6 @@ jQuery(document).ready(function ($) {
     }
     anchorFn();
 
-    // Scroll To Top Button
-    $(window).on('scroll', function() {
-        if(jQuery('.scroll-to-top').length > 0){
-            if(parseInt($(window).scrollTop(), 10) > 600){
-                jQuery('.scroll-to-top').fadeIn(500);
-            }
-            else {
-                jQuery('.scroll-to-top').fadeOut(500);
-            }
-        }
-    });
-
     // use the first element that is "scrollable"
     function scrollableElement(els) {
         for (var i = 0, argLength = arguments.length; i < argLength; i++) {
@@ -257,34 +235,6 @@ jQuery(document).ready(function ($) {
     $(".panel-toggle").click(function () {
         $(this).closest(".toggleitem").toggleClass("opened");
     });
-
-    // pricing
-    function tablePriceInit() {
-        $(".fw-price-table").each(function () {
-            var this_table_width = $(this).width();
-            var this_table_cols = $(this).children().size();
-            var this_col_width = (this_table_width / this_table_cols);
-
-            $(this).children(".fw-price-col").css('width', this_col_width - 1);
-
-            var table_col_height = 0;
-            var this_col_row = $(this).children().find(".fw-price-row, .fw-switch-row");
-            this_col_row.each(function () {
-                table_col_height = table_col_height > $(this).height() ? table_col_height : $(this).height();
-            });
-            this_col_row.each(function () {
-                $(this).height(table_col_height);
-            });
-        });
-    }
-
-    if ($('.fw-price-table').length) {
-        tablePriceInit();
-
-        $(window).on('resize', function () {
-            tablePriceInit();
-        });
-    }
 
     // Align middle the heading title but header is absolute and if section-main-row-custom it has class: fw-content-overlay-sm, fw-content-overlay-md, fw-content-overlay-lg and fw-content-overlay-custom
     function sectionTopOverlay() {
@@ -354,7 +304,7 @@ jQuery(document).ready(function ($) {
     if ($('.rev_slider_wrapper').length > 0) {
         $('.rev_slider_wrapper').parents('.fw-container-fluid, .fw-row, .fw-container').css('display', 'block');
     }
-    jQuery.fn.isOnScreen = function(){
+    $.fn.isOnScreen = function(){
         var win = $(window);
         var viewport = {
             top : win.scrollTop(),
@@ -411,7 +361,7 @@ jQuery(document).ready(function ($) {
 /**
  * Forms
  */
-jQuery(function ($) {
+$(function ($) {
     "use strict";
     var formErrorMessageClass = 'form-error',
         formErrorHideEventNamespace = '.form-error-hide',

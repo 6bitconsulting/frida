@@ -65,10 +65,38 @@ body,.fw-text-inner {
 .program-wrapper .program{
 	margin-bottom: 30px;
 	position: relative;
+	background-color: #000;
 }
 
-.program > .fw-col-inner{
+.program .fw-col-inner{
 	height: 100%;
+	padding: 25px 36px 33px 36px;
+}
+
+.program-title > .fw-special-title{
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 32px;
+	font-size: 24px;
+	letter-spacing: -0.5px;
+	color: #ffffff;
+}
+
+.program-brief{
+	height: 120px;
+	font-family: Lato;
+	font-weight: 400;
+	line-height: 24px;
+	font-size: 15px;
+	letter-spacing: -0.5px;
+	color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+    .program .fw-col-inner {
+        padding: 0px 0px 0px 0px;
+    }
 }
 
 .program-details-btn {
@@ -96,11 +124,14 @@ body,.fw-text-inner {
 	border-color: #E53388;
 }
 
-.program-wrapper .program{
-	padding-left: 5px;
-}
-.program-wrapper .program-img{
-	padding-right: 5px;
+.program-divider{
+	border-bottom: 1px solid #e53389;
+	width: 96px;
+	padding-top: 0px;
+	clear: both;
+	position: relative;
+	margin: -0.5px auto 15px;
+	max-width: 100%;
 }
 
 .purple-btn{
@@ -165,14 +196,6 @@ body,.fw-text-inner {
 	background-color: #F2AD22;
     border-color: #F2AD22;
 	color: #1e414e;
-}
-
-.program-brief{
-	height: 120px;
-}
-
-.program-brief > p{
-	font-style: normal !important;
 }
 
 .center-cropped {
