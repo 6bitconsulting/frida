@@ -8,11 +8,6 @@ a:focus,
 a:active {
     color: rgba(229,51,136,0.77);
 }
-
-.fa-remove::before, .fa-close::before, .fa-times::before {
-    content: "\f00d";
-}
-
 /* titles */
 .fw-big-title {
     font-weight: 300;
