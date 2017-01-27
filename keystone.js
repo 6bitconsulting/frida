@@ -21,6 +21,14 @@ require('./patch_jade.js')
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
 
+//minify css
+var fs = require('fs'),
+	uglifycss = require('uglifycss');
+	
+var css = uglifycss.processString(fs.readFileSync(__dirname+'/public/css/style.css','utf8'));
+
+fs.writeFileSync(__dirname+'/public/css/style.min.css',css,'utf8');
+
 //set custom email classes arguments
 keystone.set('custom email',{
   twig: {
