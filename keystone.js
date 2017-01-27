@@ -1,5 +1,7 @@
 require('dotenv').config({path:'./env.txt'});//load env
 
+delete require.cache[require.resolve('express-sitemap')];
+
 // Require keystone
 var keystone = require('keystone');
 var Twig = require('twig');
@@ -122,6 +124,16 @@ keystone.set('nav', {
 
 keystone.start({
   onStart: function(){
+	  
+	//generate sitemap on startup
+	require('express-sitemap')({
+		sitemap: __dirname+'/public/sitemap.xml',
+		http: process.env.PROTOCOL,
+		url: process.env.DOMAIN,
+		hideByRegex: [/\/keystone.+$/],
+		generate: keystone.app
+	}).XMLtoFile(); 
+	
     var hserver =  keystone.httpServer;                       
     var io = keystone.set('io', sock.listen(hserver)).get('io');
     require('socketio-auth')(io, {
